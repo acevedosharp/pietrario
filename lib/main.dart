@@ -31,7 +31,7 @@ class _PrincipalState extends State<Principal> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Starter app'),
+        title: Text('Menú principal'),
       ),
       body: Column(
         children: <Widget>[
