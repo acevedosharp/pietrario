@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'IntPomodoro.dart';
-import 'clockPomodoro.dart';
+import '../widget/IntPomodoro.dart';
+import '../widget/clockPomodoro.dart';
 
 class PrincPietrario extends StatelessWidget {
 
+  static final route = '/princ-pietrario';
 
  /* void _startPomodoro(BuildContext ctx) {
     showModalBottomSheet(

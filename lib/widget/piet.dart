@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './onPietrario.dart';
+import '../screens/onPietrario.dart';
 
 class ListaPietrario extends StatelessWidget {
   @override
