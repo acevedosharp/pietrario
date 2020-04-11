@@ -26,13 +26,31 @@ class _ClockPomodoroState extends State<ClockPomodoro>
     );
   }
 
+  Future<bool> _exit() {
+    return showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(
+            'If you go back, your progress will lose, do you want to continue?'),
+        actions: <Widget>[
+          FlatButton(
+            child: Text('No'),
+            onPressed: () => Navigator.pop(context, false),
+          ),
+          FlatButton(
+            child: Text('Yes'),
+            onPressed: () => Navigator.pop(context, true),
+          )
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-     /* onWillPop: () {
-
-    },*/
-          child: Scaffold(
+      onWillPop: _exit,
+      child: Scaffold(
         body: Padding(
           padding: EdgeInsets.all(0.0),
           child: Column(
@@ -108,7 +126,8 @@ class _ClockPomodoroState extends State<ClockPomodoro>
                           controller.stop();
                         } else {
                           controller.reverse(
-                              from: controller.value == 0 ? 1 : controller.value);
+                              from:
+                                  controller.value == 0 ? 1 : controller.value);
                         }
                       },
                     )
