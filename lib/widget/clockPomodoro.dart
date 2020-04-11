@@ -16,7 +16,8 @@ class _ClockPomodoroState extends State<ClockPomodoro>
     return '${duration.inMinutes}:${(duration.inSeconds % 60).toString().padLeft(2, '0')}';
   }
 
-  int duration = 0;
+  int duration = 1;
+  bool comp = false;
 
   void initState() {
     super.initState();
@@ -137,35 +138,51 @@ class _ClockPomodoroState extends State<ClockPomodoro>
               Container(
                 child: AnimatedBuilder(
                   animation: controller,
-                  builder: (BuildContext context, Widget) {
+                  builder: (BuildContext context, Widget child) {
                     return new Container(
-                      child: controller.isAnimating
-                          ? Text('running')
-                          : NumberPicker.integer(
-                              initialValue: 0,
-                              minValue: 0,
-                              maxValue: 60,
-                              onChanged: (val) {
-                                setState(
-                                  () {
-                                    duration = val;
-                                    controller = AnimationController(
-                                      vsync: this,
-                                      duration: Duration(minutes: duration),
-                                    );
-                                  },
-                                );
-                              },
-                            ),
-                    );
+                        child: controller.isAnimating
+                            ? Text('running ${comp = true}')
+                            : Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Column(
+                                    children: <Widget>[
+                                      Text(
+                                          'Try me to insert a \n new time to study'),
+                                      Text(
+                                        '$duration minutes',
+                                        style: TextStyle(
+                                            color: Colors.indigo, fontSize: 25),
+                                      )
+                                    ],
+                                  ),
+                                  NumberPicker.integer(
+                                    initialValue: 0,
+                                    minValue: 0,
+                                    maxValue: 60,
+                                    onChanged: (val) {
+                                      setState(
+                                        () {
+                                          duration = val;
+                                          controller = AnimationController(
+                                            vsync: this,
+                                            duration:
+                                                Duration(minutes: duration),
+                                          );
+                                        },
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ));
                   },
                 ),
               ),
               AnimatedBuilder(
                 animation: controller,
-                builder: (BuildContext context, Widget) {
+                builder: (BuildContext context, Widget child) {
                   return new Container(
-                      child: !controller.isAnimating && duration !=0
+                      child: !controller.isAnimating && comp
                           ? AlertDialog(
                               title: Text('You did it!'),
                               actions: <FlatButton>[
