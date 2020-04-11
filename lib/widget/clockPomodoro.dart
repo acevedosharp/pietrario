@@ -28,103 +28,108 @@ class _ClockPomodoroState extends State<ClockPomodoro>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(0.0),
-        child: Column(
-          children: <Widget>[
-            Expanded(
-              child: Align(
-                alignment: FractionalOffset.center,
-                child: AspectRatio(
-                  aspectRatio: 1.0,
-                  child: Stack(
-                    children: <Widget>[
-                      Positioned.fill(
-                        child: AnimatedBuilder(
-                          animation: controller,
-                          builder: (BuildContext context, Widget child) {
-                            return CustomPaint(
-                                painter: TimerPainter(
-                              animation: controller,
-                              backgroundColor: Colors.white,
-                              color: Colors.pink,
-                            ));
-                          },
+    return WillPopScope(
+     /* onWillPop: () {
+
+    },*/
+          child: Scaffold(
+        body: Padding(
+          padding: EdgeInsets.all(0.0),
+          child: Column(
+            children: <Widget>[
+              Expanded(
+                child: Align(
+                  alignment: FractionalOffset.center,
+                  child: AspectRatio(
+                    aspectRatio: 1.0,
+                    child: Stack(
+                      children: <Widget>[
+                        Positioned.fill(
+                          child: AnimatedBuilder(
+                            animation: controller,
+                            builder: (BuildContext context, Widget child) {
+                              return CustomPaint(
+                                  painter: TimerPainter(
+                                animation: controller,
+                                backgroundColor: Colors.white,
+                                color: Colors.pink,
+                              ));
+                            },
+                          ),
                         ),
-                      ),
-                      Align(
-                        alignment: FractionalOffset.center,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Text(
-                              'StudyTime= $duration minutes',
-                              style: TextStyle(
-                                color: Colors.black,
+                        Align(
+                          alignment: FractionalOffset.center,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Text(
+                                'StudyTime= $duration minutes',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
                               ),
-                            ),
-                            AnimatedBuilder(
-                              animation: controller,
-                              builder: (BuildContext context, Widget child) {
-                                return new Text(
-                                  timerString,
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 50,
-                                  ),
-                                );
-                              },
-                            ),
-                          ],
+                              AnimatedBuilder(
+                                animation: controller,
+                                builder: (BuildContext context, Widget child) {
+                                  return new Text(
+                                    timerString,
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 50,
+                                    ),
+                                  );
+                                },
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
-            Container(
-              margin: EdgeInsets.all(0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  FloatingActionButton(
-                    child: AnimatedBuilder(
-                      animation: controller,
-                      builder: (BuildContext context, Widget child) {
-                        return new Icon(controller.isAnimating
-                            ? Icons.pause
-                            : Icons.play_arrow);
+              Container(
+                margin: EdgeInsets.all(0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    FloatingActionButton(
+                      child: AnimatedBuilder(
+                        animation: controller,
+                        builder: (BuildContext context, Widget child) {
+                          return new Icon(controller.isAnimating
+                              ? Icons.pause
+                              : Icons.play_arrow);
+                        },
+                      ),
+                      onPressed: () {
+                        if (controller.isAnimating) {
+                          controller.stop();
+                        } else {
+                          controller.reverse(
+                              from: controller.value == 0 ? 1 : controller.value);
+                        }
                       },
-                    ),
-                    onPressed: () {
-                      if (controller.isAnimating) {
-                        controller.stop();
-                      } else {
-                        controller.reverse(
-                            from: controller.value == 0 ? 1 : controller.value);
-                      }
-                    },
-                  )
-                ],
+                    )
+                  ],
+                ),
               ),
-            ),
-            NumberPicker.integer(
-                initialValue: 0,
-                minValue: 0,
-                maxValue: 60,
-                onChanged: (val) {
-                  setState(() {
-                    duration = val;
-                    controller = AnimationController(
-                      vsync: this,
-                      duration: Duration(minutes: duration),
-                    );
-                  });
-                }),
-          ],
+              NumberPicker.integer(
+                  initialValue: 0,
+                  minValue: 0,
+                  maxValue: 60,
+                  onChanged: (val) {
+                    setState(() {
+                      duration = val;
+                      controller = AnimationController(
+                        vsync: this,
+                        duration: Duration(minutes: duration),
+                      );
+                    });
+                  }),
+            ],
+          ),
         ),
       ),
     );

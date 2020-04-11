@@ -3,7 +3,6 @@ import 'package:pr/model/PietrarioProvider.dart';
 import 'package:pr/screens/HomeScreen.dart';
 import 'package:pr/screens/NewPietrarioScreen.dart';
 import 'package:pr/screens/onPietrario.dart';
-import 'package:pr/widget/piet.dart';
 import 'package:provider/provider.dart';
 
 void main() => runApp(MyApp());
