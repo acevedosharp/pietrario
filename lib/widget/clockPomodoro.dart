@@ -134,19 +134,50 @@ class _ClockPomodoroState extends State<ClockPomodoro>
                   ],
                 ),
               ),
-              NumberPicker.integer(
-                  initialValue: 0,
-                  minValue: 0,
-                  maxValue: 60,
-                  onChanged: (val) {
-                    setState(() {
-                      duration = val;
-                      controller = AnimationController(
-                        vsync: this,
-                        duration: Duration(minutes: duration),
-                      );
-                    });
-                  }),
+              Container(
+                child: AnimatedBuilder(
+                  animation: controller,
+                  builder: (BuildContext context, Widget) {
+                    return new Container(
+                      child: controller.isAnimating
+                          ? Text('running')
+                          : NumberPicker.integer(
+                              initialValue: 0,
+                              minValue: 0,
+                              maxValue: 60,
+                              onChanged: (val) {
+                                setState(
+                                  () {
+                                    duration = val;
+                                    controller = AnimationController(
+                                      vsync: this,
+                                      duration: Duration(minutes: duration),
+                                    );
+                                  },
+                                );
+                              },
+                            ),
+                    );
+                  },
+                ),
+              ),
+              AnimatedBuilder(
+                animation: controller,
+                builder: (BuildContext context, Widget) {
+                  return new Container(
+                      child: !controller.isAnimating && duration !=0
+                          ? AlertDialog(
+                              title: Text('You did it!'),
+                              actions: <FlatButton>[
+                                FlatButton(
+                                    onPressed: () =>
+                                        Navigator.pop(context, true),
+                                    child: Text('Continue'))
+                              ],
+                            )
+                          : Text(''));
+                },
+              ),
             ],
           ),
         ),
