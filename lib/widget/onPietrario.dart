@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'IntPomodoro.dart';
+import 'clockPomodoro.dart';
 
 class PrincPietrario extends StatelessWidget {
-  void _startPomodoro(BuildContext ctx) {
+
+
+ /* void _startPomodoro(BuildContext ctx) {
     showModalBottomSheet(
         context: ctx,
         builder: (_) {
@@ -12,7 +15,7 @@ class PrincPietrario extends StatelessWidget {
             behavior: HitTestBehavior.opaque,
           );
         });
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +26,10 @@ class PrincPietrario extends StatelessWidget {
           FloatingActionButton(
             child: Icon(Icons.calendar_today),
             onPressed: () {
-              _startPomodoro(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ClockPomodoro()),
+              );
             },
           ),
           Row(

@@ -13,7 +13,7 @@ class _IntPomodoroState extends State<IntPomodoro> {
   bool finished = false;
   int timeForTimer = 0;
   Duration partial = Duration();
-  String timetoDisplay;
+  String timetoDisplay = 'not created';
   void start() {
     setState(() {
       started = false;
@@ -49,11 +49,6 @@ class _IntPomodoroState extends State<IntPomodoro> {
             }
           }
         }
-        /*  print(_duration.inSeconds);
-        _duration = Duration(seconds: _duration.inSeconds-1);
-        hour=_duration.inHours.toString();
-        min=_duration.inMinutes.toString();
-        sec=_duration.inSeconds.toString();*/
       });
     });
   }
@@ -81,7 +76,15 @@ class _IntPomodoroState extends State<IntPomodoro> {
       ),
       Row(
         children: <Widget>[
-          Container(child: Text('Work time: ${timetoDisplay}')),
+          Container(
+            child: Text(
+              'Work time: $timetoDisplay',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 35,
+              ),
+            ),
+          ),
         ],
       )
     ]));
