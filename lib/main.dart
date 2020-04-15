@@ -3,7 +3,10 @@ import 'package:pr/model/PietrarioProvider.dart';
 import 'package:pr/screens/HomeScreen.dart';
 import 'package:pr/screens/NewPietrarioScreen.dart';
 import 'package:pr/screens/onPietrario.dart';
+import 'package:pr/widget/clockPomodoro.dart';
 import 'package:provider/provider.dart';
+
+import 'screens/EvaluationScreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,6 +29,8 @@ class MyApp extends StatelessWidget {
           HomeScreen.route: (ctx) => HomeScreen(),
           NewPietrarioScreen.route: (ctx) => NewPietrarioScreen(),
           PrincPietrario.route: (ctx) => PrincPietrario(),
+          Home.route: (ctx) => Home(),
+          ClockPomodoro.route: (ctx) => ClockPomodoro(),
         },
       ),
     );

@@ -4,6 +4,8 @@ import 'package:pr/screens/NewPietrarioScreen.dart';
 import 'package:pr/widget/SinglePietrarioDisplay.dart';
 import 'package:provider/provider.dart';
 
+import '../screens/EvaluationScreen.dart';
+
 class PietrarioList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,8 @@ class PietrarioList extends StatelessWidget {
                   ],
                 ),
                 onPressed: () {
-                  Navigator.of(context).pushNamed(NewPietrarioScreen.route);
+//                  Navigator.of(context).pushNamed(NewPietrarioScreen.route);
+                  Navigator.of(context).pushNamed(Home.route);
                 },
               )
             ],

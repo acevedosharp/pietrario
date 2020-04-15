@@ -3,6 +3,9 @@ import 'dart:math' as math;
 import 'package:numberpicker/numberpicker.dart';
 
 class ClockPomodoro extends StatefulWidget {
+
+  static final route = "/pomodoro";
+
   @override
   _ClockPomodoroState createState() => _ClockPomodoroState();
 }

@@ -22,6 +22,7 @@ dependencies:
   flutter_duration_picker: ^1.0.4
   numberpicker: ^1.2.0
   provider: ^4.0.4
+  flutter_icons: ^1.0.0+1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -46,6 +47,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
    - assets/images/sinFoto.png
+   - assets/images/lowpoly_landscape.png
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
