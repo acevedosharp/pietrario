@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
 public class RealTimeCounter : MonoBehaviour {
     public float timer;
     public float timerSetUpMin;
@@ -12,35 +13,38 @@ public class RealTimeCounter : MonoBehaviour {
     [SerializeField] Text timerLabel;
     [SerializeField] Text textTimer;
     void Start () {
-        timer = TimeMaster.instance.CheckDate ()[1];
+        timer = TimeMaster.instance.CheckDate () [1];
         timerSetUpMin = 0;
         timerTemp = 0;
-        timer -= TimeMaster.instance.CheckDate ()[0];
+        timer -= TimeMaster.instance.CheckDate () [0];
         tempseg = 0;
         instance = this;
         //this.enabled = false;
-        print(timer);
-        print("hola1"+TimeMaster.instance.CheckDate ()[0]);
-        print("hola2"+TimeMaster.instance.CheckDate ()[1]);
+        print (timer);
+        print (TimeMaster.instance.CheckDate () [0]);
+        print (TimeMaster.instance.CheckDate () [1]);
     }
     void Update () {
-            
+        if (timer > 0) {
             timer -= Time.deltaTime;
-            timerLabel.text = timer.ToString("0");
+            timerLabel.text = Formatting();
+        }
+        else
+        timerLabel.text="00:00:00";
 
     }
 
     public void ResetClock () {
         TimeMaster.instance.SaveDate ();
         timer = timerSetUpMin * 60;
-        TimeMaster.instance.SaveFF(timer.ToString());
+        TimeMaster.instance.SaveFF (timer.ToString ());
         timerTemp = timer;
-        timer -= TimeMaster.instance.CheckDate ()[0];
+        timer -= TimeMaster.instance.CheckDate () [0];
     }
     public void Reinitialize () {
 
         //this.enabled = true;
-        
+
         this.ResetClock ();
     }
     /*public string Formatting () {
@@ -71,6 +75,13 @@ public class RealTimeCounter : MonoBehaviour {
     }
     public void ChangeScene () {
         SceneManager.LoadScene (0);
+    }
+    public string Formatting(){
+        float h,m,s;
+        h=timer/3600;
+        m=(timer%3600)/60;
+        s=(timer%3600)%60;
+        return Math.Floor(h).ToString()+":"+Math.Floor(m).ToString()+":"+Math.Floor(s).ToString("0");
     }
 
 }
