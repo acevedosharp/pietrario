@@ -19,32 +19,31 @@ public class RealTimeCounter : MonoBehaviour {
         tempseg = 0;
         instance = this;
         //this.enabled = false;
+        print(timer);
+        print("hola1"+TimeMaster.instance.CheckDate ()[0]);
+        print("hola2"+TimeMaster.instance.CheckDate ()[1]);
     }
     void Update () {
-        if (timer > 0) {
-            timerLabel.text = this.Formatting ();
-            timer -= Time.deltaTime;
-            //timer-= TimeMaster.instance.CheckDate ();
             
-        } else {
-            timerLabel.text = "00:00";
-        }
-        print (timer);
+            timer -= Time.deltaTime;
+            timerLabel.text = timer.ToString("0");
 
     }
 
     public void ResetClock () {
         TimeMaster.instance.SaveDate ();
         timer = timerSetUpMin * 60;
+        TimeMaster.instance.SaveFF(timer.ToString());
         timerTemp = timer;
         timer -= TimeMaster.instance.CheckDate ()[0];
     }
     public void Reinitialize () {
 
         //this.enabled = true;
+        
         this.ResetClock ();
     }
-    public string Formatting () {
+    /*public string Formatting () {
         if (!timer.ToString ("0").Equals (timerTemp.ToString ("0"))) {
             timerTemp = timer;
             tempseg -= 1;
@@ -57,7 +56,7 @@ public class RealTimeCounter : MonoBehaviour {
         } else
             return timerSetUpMin.ToString ("0") + ':' + tempseg.ToString ("0");
 
-    }
+    }*/
     public void AumentCounter () {
         timerSetUpMin += 1;
         textTimer.text = timerSetUpMin.ToString ("0");
@@ -70,8 +69,8 @@ public class RealTimeCounter : MonoBehaviour {
         }
 
     }
-    public void ShangeScene () {
-        SceneManager.LoadScene (1);
+    public void ChangeScene () {
+        SceneManager.LoadScene (0);
     }
 
 }

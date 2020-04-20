@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ChangeScenes : MonoBehaviour
 {
-    public void changeScene()
+    public void ChangeScenePomodoro()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
