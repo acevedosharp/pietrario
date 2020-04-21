@@ -1,5 +1,4 @@
-﻿namespace persistence.entities
-{
+﻿
     public class Succulent
     {
         public int id;
@@ -18,4 +17,3 @@
         
         // This class does NOT need a save method for persistence, it will be an immutable collection that lives only at runtime.
     }
-}

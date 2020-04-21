@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
-namespace persistence.entities
-{
+
     public class Pietrario
     {
         public int id;
@@ -27,4 +26,3 @@ namespace persistence.entities
             PlayerPrefs.SetInt("id_suc_3_piet" + id, S3);
         }
     }
-}
