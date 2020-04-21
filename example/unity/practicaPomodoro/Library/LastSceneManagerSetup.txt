@@ -1,9 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Pomodoro.unity
-  isLoaded: 1
-  isActive: 0
-  isSubScene: 0
-- path: Assets/Scenes/PietrarioScene.unity
+- path: Assets/Scenes/StartScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
