@@ -48,25 +48,25 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11162}
+      Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11320}
+      Script: {instanceID: 11310}
     - Class: 114
-      Script: {instanceID: 11360}
+      Script: {instanceID: 11350}
     - Class: 114
-      Script: {instanceID: 11710}
+      Script: {instanceID: 11702}
     - Class: 114
-      Script: {instanceID: 11750}
+      Script: {instanceID: 11742}
     - Class: 114
-      Script: {instanceID: 12128}
+      Script: {instanceID: 12120}
     - Class: 114
-      Script: {instanceID: 12316}
+      Script: {instanceID: 12308}
     - Class: 114
-      Script: {instanceID: 12482}
+      Script: {instanceID: 12474}
     - Class: 114
-      Script: {instanceID: 12612}
+      Script: {instanceID: 12604}
     - Class: 114
-      Script: {instanceID: 12966}
+      Script: {instanceID: 12958}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -103,23 +103,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11162}
+      Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11320}
+      Script: {instanceID: 11310}
     - Class: 114
-      Script: {instanceID: 11360}
+      Script: {instanceID: 11350}
     - Class: 114
-      Script: {instanceID: 11750}
+      Script: {instanceID: 11742}
     - Class: 114
-      Script: {instanceID: 12128}
+      Script: {instanceID: 12120}
     - Class: 114
-      Script: {instanceID: 12318}
+      Script: {instanceID: 12310}
     - Class: 114
-      Script: {instanceID: 12482}
+      Script: {instanceID: 12474}
     - Class: 114
-      Script: {instanceID: 12612}
+      Script: {instanceID: 12604}
     - Class: 114
-      Script: {instanceID: 12966}
+      Script: {instanceID: 12958}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -162,33 +162,33 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11162}
+      Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11320}
+      Script: {instanceID: 11310}
     - Class: 114
-      Script: {instanceID: 11360}
+      Script: {instanceID: 11350}
     - Class: 114
-      Script: {instanceID: 11362}
+      Script: {instanceID: 11352}
     - Class: 114
-      Script: {instanceID: 11466}
+      Script: {instanceID: 11456}
     - Class: 114
-      Script: {instanceID: 11630}
+      Script: {instanceID: 11554}
     - Class: 114
-      Script: {instanceID: 11750}
+      Script: {instanceID: 11622}
     - Class: 114
-      Script: {instanceID: 12128}
+      Script: {instanceID: 11742}
     - Class: 114
-      Script: {instanceID: 12150}
+      Script: {instanceID: 12120}
     - Class: 114
-      Script: {instanceID: 12482}
+      Script: {instanceID: 12142}
     - Class: 114
-      Script: {instanceID: 12612}
+      Script: {instanceID: 12474}
     - Class: 114
-      Script: {instanceID: 12966}
+      Script: {instanceID: 12604}
     - Class: 114
-      Script: {instanceID: 12990}
+      Script: {instanceID: 12958}
     - Class: 114
-      Script: {instanceID: 16882}
+      Script: {instanceID: 12982}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -204,29 +204,6 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
-      Script: {instanceID: 0}
-    Assets/Scenes/Pomodoro.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 11750}
-    - Class: 114
-      Script: {instanceID: 12966}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
       Script: {instanceID: 0}
     Assets/Scenes/StartScene.unity:
     - Class: 1
@@ -248,27 +225,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11162}
+      Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11320}
+      Script: {instanceID: 11310}
     - Class: 114
-      Script: {instanceID: 11360}
+      Script: {instanceID: 11350}
     - Class: 114
-      Script: {instanceID: 11362}
+      Script: {instanceID: 11352}
     - Class: 114
-      Script: {instanceID: 11750}
+      Script: {instanceID: 11742}
     - Class: 114
-      Script: {instanceID: 12128}
+      Script: {instanceID: 12120}
     - Class: 114
-      Script: {instanceID: 12150}
+      Script: {instanceID: 12142}
     - Class: 114
-      Script: {instanceID: 12482}
+      Script: {instanceID: 12474}
     - Class: 114
-      Script: {instanceID: 12612}
+      Script: {instanceID: 12604}
     - Class: 114
-      Script: {instanceID: 12906}
+      Script: {instanceID: 12898}
     - Class: 114
-      Script: {instanceID: 12966}
+      Script: {instanceID: 12958}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -430,6 +407,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RectMask2D
+  - hash:
+      serializedVersion: 2
+      Hash: 1a0776fea651044b5f0e77e4ddcedb65
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoveOnTouch
   - hash:
       serializedVersion: 2
       Hash: 4e9333594897a1fb8b136ad2eae996c7
@@ -760,17 +743,10 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 1a0776fea651044b5f0e77e4ddcedb65
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MoveOnTouch
   platform: 13
   scenePathNames:
   - Assets/Scenes/StartScene.unity
   - Assets/Scenes/NewPietrarioScene.unity
-  - Assets/Scenes/PietrarioScene.unity
-  - Assets/Scenes/Pomodoro.unity
   - Assets/Scenes/PietrarioListScene.unity
-  playerPath: C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/hghk.apk
+  - Assets/Scenes/PietrarioScene.unity
+  playerPath: C:/Users/Cristian Arenas C/Desktop/pietrario/example/unity/practicaPomodoro/prueba.apk

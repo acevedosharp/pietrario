@@ -5,23 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScenes : MonoBehaviour
 {
-    public void ChangeScenePietrarioList()
-    {
-        SceneManager.LoadScene(4);
-    }
-
-    public void ChangeScenePomodoro()
-    {
-        SceneManager.LoadScene(2);
-    }
-
-    public void ChangeSceneNewPietrario()
-    {
-        SceneManager.LoadScene(1);
-    }
-
+    
     public void ChangeSceneStart()
     {
         SceneManager.LoadScene(0);
     }
+    
+    
+    public void ChangeSceneNewPietrario()
+    {
+        SceneManager.LoadScene(1);
+    }
+    
+    public void ChangeScenePietrarioList()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public void ChangeScenePomodoro()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+   
+
+  
 }
