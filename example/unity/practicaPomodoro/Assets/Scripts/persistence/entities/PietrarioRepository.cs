@@ -1,41 +1,89 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class PietrarioRepository : MonoBehaviour
+
+public class PietrarioRepository
 {
+    public static void AddPietrario(Pietrario pietrario)
+    {
+        Debug.Log("Executed AddPietrario()");
 
-public InputField nameInput;
-public GameObject success_panel;
+        pietrario.id = assignId();
+        pietrario.Save();
 
-
-    public void Start(){
-
-        success_panel.SetActive(false);
-    }
-  
-    public void AddPietrario() {
-      Pietrario pietrario = new Pietrario(1,nameInput.text,1,0,0);
-      SavePietrario(pietrario);
-      success_panel.SetActive(true);
+        LoadPietrarios();
     }
 
+    public static int assignId()
+    {
+        int globalIdCounter = PlayerPrefs.GetInt("GLOBAL_ID_COUNTER");
+        int newId = globalIdCounter + 1;
+        PlayerPrefs.SetInt("GLOBAL_ID_COUNTER", newId);
+        return newId;
+    }
 
-    public void SavePietrario(Pietrario pietrario) {
 
-        PlayerPrefs.SetInt("id_pietrario", pietrario.id);
-        PlayerPrefs.SetString("nombre_pietrario", pietrario.name);
-        PlayerPrefs.SetInt("id_suc_1", pietrario.S1);
-        PlayerPrefs.SetInt("id_suc_2", pietrario.S2);
-        PlayerPrefs.SetInt("id_suc_3", pietrario.S3);
+    public static ArrayList LoadPietrarios()
+    {
+        Debug.Log("Executed LoadPietrarios()");
+
+        ArrayList result = new ArrayList();
+
+        int idCounter = 1;
+
+        while (PlayerPrefs.GetInt("id_pietrario_" + idCounter) != 0)
+        {
+            Succulent s1Obj = null;
+            Succulent s2Obj = null;
+            Succulent s3Obj = null;
+
+            string s1Snapshot = PlayerPrefs.GetString("id_suc_1_piet_" + 1);
+            if (!s1Snapshot.Equals("null"))
+                s1Obj = SucculentRepository.find(s1Snapshot);
+
+            string s2Snapshot = PlayerPrefs.GetString("id_suc_2_piet_" + 1);
+            if (!s2Snapshot.Equals("null"))
+                s2Obj = SucculentRepository.find(s1Snapshot);
+
+            string s3Snapshot = PlayerPrefs.GetString("id_suc_3_piet_" + 1);
+            if (!s3Snapshot.Equals("null"))
+                s3Obj = SucculentRepository.find(s1Snapshot);
+
+            // Create and add existing Pietrarios to memory.
+            Pietrario p = new Pietrario(
+                PlayerPrefs.GetInt("id_pietrario_" + 1),
+                PlayerPrefs.GetString("nombre_pietrario_" + 1),
+                long.Parse(PlayerPrefs.GetString("last_timestamp_piet_" + 1)),
+                PlayerPrefs.GetFloat("humidity_level_piet_" + 1),
+                s1Obj,
+                s2Obj,
+                s3Obj,
+                PlayerPrefs.GetFloat("s1wl_piet_" + 1),
+                PlayerPrefs.GetFloat("s2wl_piet_" + 1),
+                PlayerPrefs.GetFloat("s3wl_piet_" + 1),
+                PlayerPrefs.GetFloat("s1sl_piet_" + 1),
+                PlayerPrefs.GetFloat("s2sl_piet_" + 1),
+                PlayerPrefs.GetFloat("s3sl_piet_" + 1)
+            );
+
+            result.Add(p);
+
+            idCounter++;
+        }
+
+        return result;
+    }
+
+    public static bool existsAnyPietrario()
+    {
+        // If there the first Pietrario always has an id of 1.
+        if (PlayerPrefs.GetInt("id_pietrario_" + 1) != 0)
+            return true;
         
-        print ("Creado");
-     }
-
-    public void Reset(){
+        return false;
+    }
+    
+    public static void Reset(){
         PlayerPrefs.DeleteAll();
     }
-   
-    
 }

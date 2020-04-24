@@ -8,12 +8,13 @@ public class PietrarioListViewControl : MonoBehaviour
     public Text pietrario_name;
     void Start()
     {
-        int id = PlayerPrefs.GetInt("id_pietrario");
         no_pietrario_panel.SetActive(false);
-         if(id!=0){
 
-            string name= PlayerPrefs.GetString("nombre_pietrario");
-            pietrario_name.text= name;
+        if(PietrarioRepository.existsAnyPietrario())
+        {
+            // TODO: Update to handle multiple Pietrarios.
+            Pietrario pietrario = (Pietrario)PietrarioRepository.LoadPietrarios()[0];
+            pietrario_name.text= pietrario.name;
         }
 
         else{

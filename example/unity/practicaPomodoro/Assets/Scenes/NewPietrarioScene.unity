@@ -1101,7 +1101,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2142741500}
-        m_MethodName: AddPietrario
+        m_MethodName: saveNewPietrario
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1702,7 +1702,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2142741494}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5353f81891c9c2408fcbd170a0293d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e2e0d846ca09c74ab6b4c2658db2546, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nameInput: {fileID: 1492204984}

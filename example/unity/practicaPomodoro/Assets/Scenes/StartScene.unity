@@ -314,11 +314,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 357953286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5353f81891c9c2408fcbd170a0293d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 279580eea67bca04e9b4d8aeaa6ad100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameInput: {fileID: 0}
-  success_panel: {fileID: 0}
 --- !u!1 &397415973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,7 +1221,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 357953292}
-        m_MethodName: Reset
+        m_MethodName: ResetPlayerPrefs
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

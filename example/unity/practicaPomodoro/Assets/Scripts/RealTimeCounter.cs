@@ -30,14 +30,14 @@ public class RealTimeCounter : MonoBehaviour {
             timerLabel.text = Formatting();
         }
         else
-        timerLabel.text="00:00:00";
+            timerLabel.text="00:00:00";
 
     }
 
     public void ResetClock () {
         TimeMaster.instance.SaveDate ();
         timer = timerSetUpMin * 60;
-        TimeMaster.instance.SaveFF (timer.ToString ());
+        TimeMaster.instance.SaveFF (timer.ToString());
         timerTemp = timer;
         timer -= TimeMaster.instance.CheckDate () [0];
     }
