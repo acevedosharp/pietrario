@@ -54,19 +54,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11350}
     - Class: 114
-      Script: {instanceID: 11702}
+      Script: {instanceID: 11700}
     - Class: 114
-      Script: {instanceID: 11742}
+      Script: {instanceID: 11740}
     - Class: 114
-      Script: {instanceID: 12120}
+      Script: {instanceID: 12118}
     - Class: 114
-      Script: {instanceID: 12308}
+      Script: {instanceID: 12306}
     - Class: 114
-      Script: {instanceID: 12474}
+      Script: {instanceID: 12472}
     - Class: 114
-      Script: {instanceID: 12604}
+      Script: {instanceID: 12602}
     - Class: 114
-      Script: {instanceID: 12958}
+      Script: {instanceID: 12956}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -109,17 +109,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11350}
     - Class: 114
-      Script: {instanceID: 11742}
+      Script: {instanceID: 11740}
     - Class: 114
-      Script: {instanceID: 12120}
+      Script: {instanceID: 12118}
     - Class: 114
-      Script: {instanceID: 12310}
+      Script: {instanceID: 12308}
     - Class: 114
-      Script: {instanceID: 12474}
+      Script: {instanceID: 12472}
     - Class: 114
-      Script: {instanceID: 12604}
+      Script: {instanceID: 12602}
     - Class: 114
-      Script: {instanceID: 12958}
+      Script: {instanceID: 12956}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -155,8 +155,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -172,23 +170,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11456}
     - Class: 114
-      Script: {instanceID: 11554}
+      Script: {instanceID: 11620}
     - Class: 114
-      Script: {instanceID: 11622}
+      Script: {instanceID: 11740}
     - Class: 114
-      Script: {instanceID: 11742}
+      Script: {instanceID: 12118}
     - Class: 114
-      Script: {instanceID: 12120}
+      Script: {instanceID: 12140}
     - Class: 114
-      Script: {instanceID: 12142}
+      Script: {instanceID: 12472}
     - Class: 114
-      Script: {instanceID: 12474}
+      Script: {instanceID: 12602}
     - Class: 114
-      Script: {instanceID: 12604}
+      Script: {instanceID: 12956}
     - Class: 114
-      Script: {instanceID: 12958}
+      Script: {instanceID: 12980}
     - Class: 114
-      Script: {instanceID: 12982}
+      Script: {instanceID: 19646}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -233,19 +231,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11352}
     - Class: 114
-      Script: {instanceID: 11742}
+      Script: {instanceID: 11740}
     - Class: 114
-      Script: {instanceID: 12120}
+      Script: {instanceID: 12118}
     - Class: 114
-      Script: {instanceID: 12142}
+      Script: {instanceID: 12140}
     - Class: 114
-      Script: {instanceID: 12474}
+      Script: {instanceID: 12472}
     - Class: 114
-      Script: {instanceID: 12604}
+      Script: {instanceID: 12602}
     - Class: 114
-      Script: {instanceID: 12898}
+      Script: {instanceID: 12896}
     - Class: 114
-      Script: {instanceID: 12958}
+      Script: {instanceID: 12956}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -407,12 +405,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RectMask2D
-  - hash:
-      serializedVersion: 2
-      Hash: 1a0776fea651044b5f0e77e4ddcedb65
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MoveOnTouch
   - hash:
       serializedVersion: 2
       Hash: 4e9333594897a1fb8b136ad2eae996c7
@@ -743,10 +735,16 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoveOnTouch
   platform: 13
   scenePathNames:
   - Assets/Scenes/StartScene.unity
   - Assets/Scenes/NewPietrarioScene.unity
   - Assets/Scenes/PietrarioListScene.unity
   - Assets/Scenes/PietrarioScene.unity
-  playerPath: C:/Users/Cristian Arenas C/Desktop/pietrario/example/unity/practicaPomodoro/prueba.apk
+  playerPath: C:/Users/JVH/Desktop/Nueva carpeta/pietrario/example/unity/practicaPomodoro/hghk.apk

@@ -7,10 +7,8 @@ public class MoveOnTouch : MonoBehaviour {
     public Touch click;
     private float controller;
     Quaternion pr;
-    [SerializeField] private Text tx1;
-    [SerializeField] private Text tx2;
     void Start () {
-        controller = 0.5f;
+        controller = 0.3f;
         pr=transform.rotation;
 
     }
@@ -24,7 +22,7 @@ public class MoveOnTouch : MonoBehaviour {
             if (click.phase == TouchPhase.Moved)
             {
                 
-                transform.Rotate(new Vector3(click.deltaPosition.y*controller,-click.deltaPosition.x*controller,0));
+                transform.Rotate(new Vector3(-click.deltaPosition.y*controller,-click.deltaPosition.x*controller,0));
 
 
             }
