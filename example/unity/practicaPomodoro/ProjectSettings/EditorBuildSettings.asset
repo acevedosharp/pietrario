@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PietrarioScene.unity
     guid: 49208d5c0d86f5f49b4c57c67870e580
+  - enabled: 1
+    path: Assets/Scenes/ARScene.unity
+    guid: 578ee4ca7e2350f499724ff3604e90fa
   m_configObjects: {}
