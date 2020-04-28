@@ -27,10 +27,7 @@ public class ChangeScenes : MonoBehaviour
         SceneManager.LoadScene(3);
     }
 
-   public void ChangeSceneAR()
-       {
-           SceneManager.LoadScene(4);
-       }
+   
 
   
 }
