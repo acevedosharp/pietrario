@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,6 +20,11 @@ public class SucculentPersistance : MonoBehaviour
         pietrario = (Pietrario)PietrarioRepository.LoadPietrarios()[0];
         renderSucculent();
 
+    }
+
+    private void Update()
+    {
+        pietrario.s1.updateWaterLevel(DateTime.Now.Ticks-pietrario.dtS1);
     }
 
     public void renderSucculent()
@@ -58,17 +64,20 @@ public class SucculentPersistance : MonoBehaviour
     public void enableSucculent1()
     {
         pietrario.s1=SucculentRepository.find("SUC1") ;
+        pietrario.Save();
         this.renderSucculent();
     }
     public void enableSucculent2()
     {
         pietrario.s2=SucculentRepository.find("SUC2") ;
+        pietrario.Save();
         this.renderSucculent();
-        
+         
     }
     public void enableSucculent3()
     {
         pietrario.s3=SucculentRepository.find("SUC3") ;
+        pietrario.Save();
         this.renderSucculent();
     }
         

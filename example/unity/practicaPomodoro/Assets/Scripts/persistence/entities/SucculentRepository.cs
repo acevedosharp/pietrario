@@ -5,9 +5,9 @@ public class SucculentRepository
     // Acá se añaden las suculentas.
     public static Succulent[] Suculentas =
     {
-        new Succulent("SUC1", "Cáctus", "/", 100F, 100F, 2F, 8F),
-        new Succulent("SUC2", "Cac2", "/", 100F, 100F, 2F, 8F),
-        new Succulent("SUC3", "Mushroom", "/", 100F, 100F, 2F, 8F)
+        new Succulent("SUC1", "Cáctus", "/", 100F, 100F),
+        new Succulent("SUC2", "Cac2", "/", 100F, 100F),
+        new Succulent("SUC3", "Mushroom", "/", 100F, 100F)
     };
 
     public static Succulent find(string persistentId)
@@ -19,9 +19,7 @@ public class SucculentRepository
             referencedSucculent.name,
             referencedSucculent.resourcePath,
             referencedSucculent.waterLevel,
-            referencedSucculent.sunlightLevel,
-            referencedSucculent.waterDecayIndex,
-            referencedSucculent.sunlightDecayIndex
+            referencedSucculent.waterDecayIndex
         );
     }
 }
