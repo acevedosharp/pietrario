@@ -11,6 +11,7 @@ ScriptsOnlyBuild:
     - PlacementIndicator
     - RealTimeCounter
     - SpawnPietrario
+    - SucculentPersistance
     - TimeMaster
     - hidePomodoro
     Unity.Rider.Editor.dll:
@@ -65,31 +66,31 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11474}
     - Class: 114
-      Script: {instanceID: 11604}
+      Script: {instanceID: 11630}
     - Class: 114
-      Script: {instanceID: 11804}
+      Script: {instanceID: 11830}
     - Class: 114
-      Script: {instanceID: 11894}
+      Script: {instanceID: 11920}
     - Class: 114
-      Script: {instanceID: 11996}
+      Script: {instanceID: 12022}
     - Class: 114
-      Script: {instanceID: 12656}
+      Script: {instanceID: 12684}
     - Class: 114
-      Script: {instanceID: 12768}
+      Script: {instanceID: 12796}
     - Class: 114
-      Script: {instanceID: 12864}
+      Script: {instanceID: 12892}
     - Class: 114
-      Script: {instanceID: 13020}
+      Script: {instanceID: 13048}
     - Class: 114
-      Script: {instanceID: 13198}
+      Script: {instanceID: 13226}
     - Class: 114
-      Script: {instanceID: 13340}
+      Script: {instanceID: 13368}
     - Class: 114
-      Script: {instanceID: 13450}
+      Script: {instanceID: 13478}
     - Class: 114
-      Script: {instanceID: 13456}
+      Script: {instanceID: 13484}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -116,25 +117,25 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11196}
     - Class: 114
-      Script: {instanceID: 11362}
+      Script: {instanceID: 11388}
     - Class: 114
-      Script: {instanceID: 11408}
+      Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11852}
+      Script: {instanceID: 11878}
     - Class: 114
-      Script: {instanceID: 11894}
+      Script: {instanceID: 11920}
     - Class: 114
-      Script: {instanceID: 12392}
+      Script: {instanceID: 12420}
     - Class: 114
-      Script: {instanceID: 12630}
+      Script: {instanceID: 12658}
     - Class: 114
-      Script: {instanceID: 12832}
+      Script: {instanceID: 12860}
     - Class: 114
-      Script: {instanceID: 12992}
+      Script: {instanceID: 13020}
     - Class: 114
-      Script: {instanceID: 13450}
+      Script: {instanceID: 13478}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -171,23 +172,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11196}
     - Class: 114
-      Script: {instanceID: 11362}
+      Script: {instanceID: 11388}
     - Class: 114
-      Script: {instanceID: 11408}
+      Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11894}
+      Script: {instanceID: 11920}
     - Class: 114
-      Script: {instanceID: 12392}
+      Script: {instanceID: 12420}
     - Class: 114
-      Script: {instanceID: 12632}
+      Script: {instanceID: 12660}
     - Class: 114
-      Script: {instanceID: 12832}
+      Script: {instanceID: 12860}
     - Class: 114
-      Script: {instanceID: 12992}
+      Script: {instanceID: 13020}
     - Class: 114
-      Script: {instanceID: 13450}
+      Script: {instanceID: 13478}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -223,34 +224,38 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11196}
     - Class: 114
-      Script: {instanceID: 11362}
+      Script: {instanceID: 11388}
     - Class: 114
-      Script: {instanceID: 11408}
+      Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11538}
+      Script: {instanceID: 11564}
     - Class: 114
-      Script: {instanceID: 11748}
+      Script: {instanceID: 11774}
     - Class: 114
-      Script: {instanceID: 11894}
+      Script: {instanceID: 11920}
     - Class: 114
-      Script: {instanceID: 12392}
+      Script: {instanceID: 12286}
     - Class: 114
-      Script: {instanceID: 12446}
+      Script: {instanceID: 12420}
     - Class: 114
-      Script: {instanceID: 12832}
+      Script: {instanceID: 12474}
     - Class: 114
-      Script: {instanceID: 12992}
+      Script: {instanceID: 12860}
     - Class: 114
-      Script: {instanceID: 13450}
+      Script: {instanceID: 13020}
     - Class: 114
-      Script: {instanceID: 13480}
+      Script: {instanceID: 13478}
+    - Class: 114
+      Script: {instanceID: 13508}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -287,27 +292,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11196}
     - Class: 114
-      Script: {instanceID: 11362}
+      Script: {instanceID: 11388}
     - Class: 114
-      Script: {instanceID: 11408}
+      Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 11436}
     - Class: 114
-      Script: {instanceID: 11894}
+      Script: {instanceID: 11920}
     - Class: 114
-      Script: {instanceID: 12392}
+      Script: {instanceID: 12420}
     - Class: 114
-      Script: {instanceID: 12414}
+      Script: {instanceID: 12442}
     - Class: 114
-      Script: {instanceID: 12832}
+      Script: {instanceID: 12860}
     - Class: 114
-      Script: {instanceID: 12992}
+      Script: {instanceID: 13020}
     - Class: 114
-      Script: {instanceID: 13368}
+      Script: {instanceID: 13396}
     - Class: 114
-      Script: {instanceID: 13450}
+      Script: {instanceID: 13478}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -631,6 +636,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: f30a36d9c112f54ec85a12217954f0b8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SucculentPersistance
   - hash:
       serializedVersion: 2
       Hash: 290afc8da8e459e0b8dc7444bfaf5e35
@@ -1016,4 +1027,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/PietrarioListScene.unity
   - Assets/Scenes/PietrarioScene.unity
   - Assets/Scenes/ARScene.unity
-  playerPath: C:/Users/Cristian Arenas C/Desktop/pietrario/example/unity/practicaPomodoro/Builds/30-04-2020v3.apk
+  playerPath: C:/Users/Cristian Arenas C/Desktop/pietrario/example/unity/practicaPomodoro/Builds/30-04-2020v4.apk
