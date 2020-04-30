@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 
@@ -10,7 +11,7 @@ public class PietrarioRepository
 
         pietrario.id = assignId();
         pietrario.Save();
-
+        Debug.Log("Pietrario "+ pietrario.ToString());
         LoadPietrarios();
     }
 
@@ -61,9 +62,10 @@ public class PietrarioRepository
                 PlayerPrefs.GetFloat("s1wl_piet_" + 1),
                 PlayerPrefs.GetFloat("s2wl_piet_" + 1),
                 PlayerPrefs.GetFloat("s3wl_piet_" + 1),
-                PlayerPrefs.GetFloat("s1sl_piet_" + 1),
-                PlayerPrefs.GetFloat("s2sl_piet_" + 1),
-                PlayerPrefs.GetFloat("s3sl_piet_" + 1)
+                PlayerPrefs.GetFloat("sunLightLevel "+1),
+                long.Parse(PlayerPrefs.GetString("dtS1 "+1)),
+                long.Parse(PlayerPrefs.GetString("dtS2 "+1)),
+                long.Parse(PlayerPrefs.GetString("dtS3 "+1))
             );
 
             result.Add(p);

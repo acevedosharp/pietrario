@@ -19,9 +19,8 @@ public class NewPietrarioController : MonoBehaviour
             nameInput.text, 
             DateTime.Now.Ticks, 
             50, 
-            SucculentRepository.find("SUC1"), 
-            null, null, 0,0,0, 0, 0, 0); // Ignored.
-        
+            null, 
+            null, null, 0,0,0, 0, DateTime.Now.Ticks, DateTime.Now.Ticks,DateTime.Now.Ticks); // Ignored.
         PietrarioRepository.AddPietrario(pietrario);
         success_panel.SetActive(true);
     }

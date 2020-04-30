@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 
     public class Pietrario
@@ -12,9 +13,10 @@
     public float humidityLevel;
     public Succulent s1, s2, s3;
     public float s1wl, s2wl, s3wl; // Water level
-    public float s1sl, s2sl, s3sl; // Sunlight level
+    public float sunLightLevel; // Sunlight level
+    public long dtS1, dtS2, dtS3; //last Change in each Succulent
 
-    public Pietrario(int id, string name, long creationDate, float humidityLevel, Succulent s1, Succulent s2, Succulent s3, float s1Wl, float s2Wl, float s3Wl, float s1Sl, float s2Sl, float s3Sl)
+    public Pietrario(int id, string name, long creationDate, float humidityLevel, Succulent s1, Succulent s2, Succulent s3, float s1Wl, float s2Wl, float s3Wl, float sunLightLevel, long dtS1, long dtS2, long dtS3 )
     {
         this.id = id;
         this.name = name;
@@ -26,38 +28,28 @@
         s1wl = s1Wl;
         s2wl = s2Wl;
         s3wl = s3Wl;
-        s1sl = s1Sl;
-        s2sl = s2Sl;
-        s3sl = s3Sl;
+        this.dtS1 = dtS1;
+        this.dtS2 = dtS2;
+        this.dtS3 = dtS3;
+        this.sunLightLevel = sunLightLevel;
 
         if (s1 != null)
         {
             s1.waterLevel = s1Wl;
-            s1.sunlightLevel = s1Sl;
+            s1.lastTimeChanged = dtS1;
         }
         if (s2 != null)
         {
             s2.waterLevel = s2Wl;
-            s2.sunlightLevel = s2Sl;
+            s2.lastTimeChanged = dtS2;
         }
         if (s3 != null)
         {
             s3.waterLevel = s3Wl;
-            s3.sunlightLevel = s3Sl;
+            s3.lastTimeChanged = dtS3;
         }
         
         lastTimestamp = creationDate;
-    }
-
-    public void updateWithGivenTimeMilis(long timeToEvaluate)
-    {
-        long delta = timeToEvaluate - lastTimestamp;
-        
-        s1.update(delta);
-        s2.update(delta);
-        s3.update(delta);
-
-        lastTimestamp = timeToEvaluate;
     }
 
     // This class needs a save method for persistence
@@ -68,51 +60,54 @@
         PlayerPrefs.SetString("fecha_creacion_piet_" + id, creationDate.ToString()); // long value stored as string!!
         PlayerPrefs.SetString("last_timestamp_piet_" + id, lastTimestamp.ToString()); // long value stored as string!!
         PlayerPrefs.SetFloat("humidity_level_piet_" + id, humidityLevel);
+        PlayerPrefs.SetFloat("sunLightLevel "+id,sunLightLevel);
+        
         
         
         if (s1 == null)
         {
             PlayerPrefs.SetString("id_suc_1_piet_" + id, "null");
             PlayerPrefs.SetFloat("s1wl_piet_" + id, 0);
-            PlayerPrefs.SetFloat("s1sl_piet_" + id, 0);
+            PlayerPrefs.SetString("dtS1 "+id,"0");
         }
         else
         {
+            this.dtS1 = DateTime.Now.Ticks;
             PlayerPrefs.SetString("id_suc_1_piet_" + id, s1.persistentId);
             PlayerPrefs.SetFloat("s1wl_piet_" + id, s1wl);
-            PlayerPrefs.SetFloat("s1sl_piet_" + id, s1sl);
+            PlayerPrefs.SetString("dtS1 "+id,dtS1.ToString());
         }
         
         if (s2 == null)
         {
             PlayerPrefs.SetString("id_suc_2_piet_" + id, "null");
             PlayerPrefs.SetFloat("s2wl_piet_" + id, 0);
-            PlayerPrefs.SetFloat("s2sl_piet_" + id, 0);
+            PlayerPrefs.SetString("dtS2 "+id,"0");
         }
         else
         {
             PlayerPrefs.SetString("id_suc_2_piet_" + id, s2.persistentId);
             PlayerPrefs.SetFloat("s2wl_piet_" + id, s2wl);
-            PlayerPrefs.SetFloat("s2sl_piet_" + id, s2sl);
+            PlayerPrefs.SetString("dtS2 "+id,dtS2.ToString());
         }
         
         if (s3 == null)
         {
             PlayerPrefs.SetString("id_suc_3_piet_" + id, "null");
             PlayerPrefs.SetFloat("s3wl_piet_" + id, 0);
-            PlayerPrefs.SetFloat("s3sl_piet_" + id, 0);
+            PlayerPrefs.SetString("dtS3 "+id,"0");
         }
         else
         {
             PlayerPrefs.SetString("id_suc_3_piet_" + id, s3.persistentId);
             PlayerPrefs.SetFloat("s3wl_piet_" + id, s3wl);
-            PlayerPrefs.SetFloat("s3sl_piet_" + id, s3sl);
+            PlayerPrefs.SetString("dtS3 "+id,dtS3.ToString());
         }
     }
 
     public override string ToString()
     {
-        return s1 +" | "+ s2 + " | "+ s3;
+        return id +", "+ name +", "+ creationDate +", "+ humidityLevel +", "+ s1wl+", "+ s2wl+", "+ s3wl+", "+ sunLightLevel+", "+ dtS1+", "+ dtS2+", "+ dtS3;
     }
 }
 
