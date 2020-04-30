@@ -579,7 +579,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 50}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 0, y: -601.94446}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &255039530
@@ -2760,6 +2760,9 @@ MonoBehaviour:
   buttonSucculent1: {fileID: 8226363660583979026}
   buttonSucculent2: {fileID: 8226363660993390470}
   buttonSucculent3: {fileID: 8226363662473656919}
+  buttonSucculentCopy1: {fileID: 588597970}
+  buttonSucculentCopy2: {fileID: 2100027096}
+  buttonSucculentCopy3: {fileID: 836478871}
 --- !u!4 &40499478680210962
 Transform:
   m_ObjectHideFlags: 0

@@ -12,6 +12,10 @@ public class SucculentPersistance : MonoBehaviour
     [SerializeField] GameObject buttonSucculent1;
     [SerializeField] GameObject buttonSucculent2;
     [SerializeField] GameObject buttonSucculent3;
+    [SerializeField] GameObject buttonSucculentCopy1;
+    [SerializeField] GameObject buttonSucculentCopy2;
+    [SerializeField] GameObject buttonSucculentCopy3;
+
     private Pietrario pietrario;
     
 
@@ -35,6 +39,7 @@ public class SucculentPersistance : MonoBehaviour
         if (pietrario.s3!=null)
         {
             updateS3wl();
+            
         }
         
         
@@ -50,6 +55,7 @@ public class SucculentPersistance : MonoBehaviour
             pietrario.s1wl -= pietrario.s1.waterDecayIndex * Convert.ToSingle(Math.Floor(timePassed.TotalSeconds));
             print(pietrario.s1wl);
             pietrario.dtS1 = DateTime.Now.Ticks;
+            
         }
 
         if (pietrario.s1wl<=0)
@@ -105,31 +111,38 @@ public class SucculentPersistance : MonoBehaviour
         {
             succulent1.SetActive(false);
             buttonSucculent1.SetActive(true);
+            buttonSucculentCopy1.SetActive(true);
+
         }
         else
         {
             succulent1.SetActive(true);
             buttonSucculent1.SetActive(false);
+            buttonSucculentCopy1.SetActive(false);
         }
         if (pietrario.s2==null)
         {
             succulent2.SetActive(false);
             buttonSucculent2.SetActive(true);
+            buttonSucculentCopy2.SetActive(true);
         }
         else
         {
             succulent2.SetActive(true);
             buttonSucculent2.SetActive(false);
+            buttonSucculentCopy2.SetActive(false);
         }
         if (pietrario.s3==null)
         {
             succulent3.SetActive(false);
             buttonSucculent3.SetActive(true);
+            buttonSucculentCopy3.SetActive(true);
         }
         else
         {
             succulent3.SetActive(true);
             buttonSucculent3.SetActive(false);
+            buttonSucculentCopy3.SetActive(false);
         }
     }
 
