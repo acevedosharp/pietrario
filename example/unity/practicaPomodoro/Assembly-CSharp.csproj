@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AR\BackButton.cs" />
      <Compile Include="Assets\Scripts\AR\PlacementIndicator.cs" />
      <Compile Include="Assets\Scripts\AR\SpawnPietrario.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes.cs" />

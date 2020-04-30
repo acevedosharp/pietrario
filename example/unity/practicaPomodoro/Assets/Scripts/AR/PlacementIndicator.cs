@@ -26,9 +26,9 @@ public class PlacementIndicator : MonoBehaviour
     {
         
         List<ARRaycastHit> hits = new List<ARRaycastHit>();
-        //creo mi raycast con una posicion, el detector de físico y el tipo de superficies en las que se va a activar
+        //creo mi raycast con una posicion, mis dimensiones fisicas y el tipo de superficies en las que se va a activar
         raycastManager.Raycast(new Vector2(Screen.width / 2, Screen.height / 2),hits,TrackableType.Planes);
-
+    
         if (hits.Count > 0)
         {
             transform.position = hits[0].pose.position;
