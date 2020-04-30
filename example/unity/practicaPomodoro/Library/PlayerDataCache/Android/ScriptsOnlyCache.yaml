@@ -12,7 +12,6 @@ ScriptsOnlyBuild:
     - TimeMaster
     - hidePomodoro
     Unity.Rider.Editor.dll:
-    - Packages.Rider.Editor.RiderScriptEditorData
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -502,7 +501,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: 3e06aeae0d0cd3b0440433c3cdf24b08
+      Hash: f30a36d9c112f54ec85a12217954f0b8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SucculentPersistance
@@ -758,4 +757,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/NewPietrarioScene.unity
   - Assets/Scenes/PietrarioListScene.unity
   - Assets/Scenes/PietrarioScene.unity
-  playerPath: C:/Users/JVH/Desktop/nueva rama/pietrario/example/unity/practicaPomodoro/hghk.apk
+  playerPath: /Users/julian31079/Desktop/pietrario/example/unity/practicaPomodoro/h.apk
