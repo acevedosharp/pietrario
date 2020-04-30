@@ -25,7 +25,8 @@
         public void updateWaterLevel(long timeDelta)
         {
             DateTime tp=new DateTime(timeDelta);
-            Debug.Log(tp.Minute);
+            TimeSpan tm=new TimeSpan(timeDelta);
+            // Debug.Log(Convert.ToInt32(tm.TotalSeconds));
             //waterLevel -= waterDecayIndex *tp.Second;
         }
 

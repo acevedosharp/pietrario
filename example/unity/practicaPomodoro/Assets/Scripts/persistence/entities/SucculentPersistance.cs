@@ -24,7 +24,79 @@ public class SucculentPersistance : MonoBehaviour
 
     private void Update()
     {
-        pietrario.s1.updateWaterLevel(DateTime.Now.Ticks-pietrario.dtS1);
+        if (pietrario.s1!=null)
+        {
+            updateS1wl();
+        }
+        if (pietrario.s2!=null)
+        {
+            updateS2wl();
+        }
+        if (pietrario.s3!=null)
+        {
+            updateS3wl();
+        }
+        
+        
+    }
+
+    public void updateS1wl()
+    {
+        long timeDelta = DateTime.Now.Ticks - pietrario.dtS1;
+        TimeSpan timePassed = new TimeSpan(timeDelta);
+
+        if (Math.Floor(timePassed.TotalSeconds)>0 && pietrario.s1wl>0)
+        {
+            pietrario.s1wl -= pietrario.s1.waterDecayIndex * Convert.ToSingle(Math.Floor(timePassed.TotalSeconds));
+            print(pietrario.s1wl);
+            pietrario.dtS1 = DateTime.Now.Ticks;
+        }
+
+        if (pietrario.s1wl<=0)
+        {
+            pietrario.s1 = null;
+            
+            pietrario.Save();
+            this.renderSucculent();
+        }
+    }
+    public void updateS2wl()
+    {
+        long timeDelta = DateTime.Now.Ticks - pietrario.dtS2;
+        TimeSpan timePassed = new TimeSpan(timeDelta);
+
+        if (Math.Floor(timePassed.TotalSeconds)>0 && pietrario.s2wl>0)
+        {
+            pietrario.s2wl -= pietrario.s2.waterDecayIndex * Convert.ToSingle(Math.Floor(timePassed.TotalSeconds));
+           // print(pietrario.s2wl);
+            pietrario.dtS2 = DateTime.Now.Ticks;
+        }
+        if (pietrario.s2wl<=0)
+        {
+            pietrario.s2 = null;
+            
+            pietrario.Save();
+            this.renderSucculent();
+        }
+    }
+    public void updateS3wl()
+    {
+        long timeDelta = DateTime.Now.Ticks - pietrario.dtS3;
+        TimeSpan timePassed = new TimeSpan(timeDelta);
+
+        if (Math.Floor(timePassed.TotalSeconds)>0 && pietrario.s3wl>0)
+        {
+            pietrario.s3wl -= pietrario.s3.waterDecayIndex * Convert.ToSingle(Math.Floor(timePassed.TotalSeconds));
+           // print(pietrario.s3wl);
+            pietrario.dtS3 = DateTime.Now.Ticks;
+        }
+        if (pietrario.s3wl<=0)
+        {
+            pietrario.s3 = null;
+            
+            pietrario.Save();
+            this.renderSucculent();
+        }
     }
 
     public void renderSucculent()
@@ -63,13 +135,15 @@ public class SucculentPersistance : MonoBehaviour
 
     public void enableSucculent1()
     {
-        pietrario.s1=SucculentRepository.find("SUC1") ;
+        pietrario.s1=SucculentRepository.find("SUC1");
+        pietrario.s1wl = 100;
         pietrario.Save();
         this.renderSucculent();
     }
     public void enableSucculent2()
     {
         pietrario.s2=SucculentRepository.find("SUC2") ;
+        pietrario.s2wl = 100;
         pietrario.Save();
         this.renderSucculent();
          
@@ -77,6 +151,7 @@ public class SucculentPersistance : MonoBehaviour
     public void enableSucculent3()
     {
         pietrario.s3=SucculentRepository.find("SUC3") ;
+        pietrario.s3wl = 100;
         pietrario.Save();
         this.renderSucculent();
     }
