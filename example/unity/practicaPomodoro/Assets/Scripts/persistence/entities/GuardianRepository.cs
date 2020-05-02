@@ -8,7 +8,7 @@ public class GuardianRepository
     // Acá se añaden las suculentas.
     public static Guardian[] guardianes =
     {
-        new Guardian("GUA1", "Trigrito", "Grrrrr") 
+        new Guardian("GUA1", "Tigrito", "Miau") 
     };
 
     public static Guardian find(string id)

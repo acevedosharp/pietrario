@@ -832,8 +832,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 446}
-  m_SizeDelta: {x: 623.77814, y: 150.14215}
+  m_AnchoredPosition: {x: 21.3, y: 495.07}
+  m_SizeDelta: {x: 666.4289, y: 150.14215}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &792374109
 MonoBehaviour:
@@ -1102,6 +1102,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2142741500}
         m_MethodName: saveNewPietrario
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2142741501}
+        m_MethodName: createInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1589,6 +1600,7 @@ GameObject:
   - component: {fileID: 2142741495}
   - component: {fileID: 2142741499}
   - component: {fileID: 2142741500}
+  - component: {fileID: 2142741501}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1707,3 +1719,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameInput: {fileID: 1492204984}
   success_panel: {fileID: 420101066}
+--- !u!114 &2142741501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142741494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788b8a3c77d74b041945be04e71bbe34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inv_suc1: {fileID: 0}
+  inv_suc2: {fileID: 0}
+  inv_suc3: {fileID: 0}
+  inv_gua1: {fileID: 0}

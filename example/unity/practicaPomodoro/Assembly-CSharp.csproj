@@ -59,8 +59,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AR\BackButton.cs" />
+     <Compile Include="Assets\Scripts\AR\LightEstimator.cs" />
      <Compile Include="Assets\Scripts\AR\PlacementIndicator.cs" />
      <Compile Include="Assets\Scripts\AR\SpawnPietrario.cs" />
+     <Compile Include="Assets\Scripts\AddSuculentPanelVisibility.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes.cs" />
      <Compile Include="Assets\Scripts\GradientScript.cs" />
      <Compile Include="Assets\Scripts\MoveOnTouch.cs" />
@@ -68,7 +70,7 @@
      <Compile Include="Assets\Scripts\RealTimeCounter.cs" />
      <Compile Include="Assets\Scripts\Rotator.cs" />
      <Compile Include="Assets\Scripts\TimeMaster.cs" />
-     <Compile Include="Assets\Scripts\hidePomodoro.cs" />
+     <Compile Include="Assets\Scripts\canvasVisibility.cs" />
      <Compile Include="Assets\Scripts\persistence\entities\Guardian.cs" />
      <Compile Include="Assets\Scripts\persistence\entities\GuardianRepository.cs" />
      <Compile Include="Assets\Scripts\persistence\entities\Inventory.cs" />
@@ -77,6 +79,7 @@
      <Compile Include="Assets\Scripts\persistence\entities\Succulent.cs" />
      <Compile Include="Assets\Scripts\persistence\entities\SucculentPersistance.cs" />
      <Compile Include="Assets\Scripts\persistence\entities\SucculentRepository.cs" />
+     <Compile Include="Assets\Scripts\view_controller\InventoryController.cs" />
      <Compile Include="Assets\Scripts\view_controller\MainMenuController.cs" />
      <Compile Include="Assets\Scripts\view_controller\NewPietrarioController.cs" />
      <None Include="Assets\Prefabs\PietrarioModelo\Blender\c30lumexfif4-eb_house_plant_01\eb_house_plant_01\READ_ME.txt" />

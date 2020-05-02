@@ -1,9 +1,12 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AddSuculentPanelVisibility
     - BackButton
     - ChangeScenes
     - GradientScript
+    - InventoryController
+    - LightEstimator
     - MainMenuController
     - MoveOnTouch
     - NewPietrarioController
@@ -13,7 +16,7 @@ ScriptsOnlyBuild:
     - SpawnPietrario
     - SucculentPersistance
     - TimeMaster
-    - hidePomodoro
+    - canvasVisibility
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.RiderScriptEditorData
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -66,21 +69,29 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11474}
+      Script: {instanceID: 11184}
     - Class: 114
-      Script: {instanceID: 11630}
+      Script: {instanceID: 11376}
     - Class: 114
-      Script: {instanceID: 11830}
+      Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 11920}
+      Script: {instanceID: 11618}
     - Class: 114
-      Script: {instanceID: 12022}
+      Script: {instanceID: 11818}
     - Class: 114
-      Script: {instanceID: 12684}
+      Script: {instanceID: 11908}
     - Class: 114
-      Script: {instanceID: 12796}
+      Script: {instanceID: 12010}
     - Class: 114
-      Script: {instanceID: 12892}
+      Script: {instanceID: 12452}
+    - Class: 114
+      Script: {instanceID: 12680}
+    - Class: 114
+      Script: {instanceID: 12792}
+    - Class: 114
+      Script: {instanceID: 12888}
+    - Class: 114
+      Script: {instanceID: 13020}
     - Class: 114
       Script: {instanceID: 13048}
     - Class: 114
@@ -93,9 +104,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13484}
     - Class: 115
       Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/NewPietrarioScene.unity:
     - Class: 1
@@ -117,21 +136,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11196}
+      Script: {instanceID: 11184}
     - Class: 114
-      Script: {instanceID: 11388}
+      Script: {instanceID: 11376}
     - Class: 114
-      Script: {instanceID: 11434}
+      Script: {instanceID: 11422}
     - Class: 114
-      Script: {instanceID: 11878}
+      Script: {instanceID: 11866}
     - Class: 114
-      Script: {instanceID: 11920}
+      Script: {instanceID: 11908}
     - Class: 114
-      Script: {instanceID: 12420}
+      Script: {instanceID: 12412}
     - Class: 114
-      Script: {instanceID: 12658}
+      Script: {instanceID: 12654}
     - Class: 114
-      Script: {instanceID: 12860}
+      Script: {instanceID: 12856}
+    - Class: 114
+      Script: {instanceID: 13010}
     - Class: 114
       Script: {instanceID: 13020}
     - Class: 114
@@ -172,19 +193,19 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11196}
+      Script: {instanceID: 11184}
     - Class: 114
-      Script: {instanceID: 11388}
+      Script: {instanceID: 11376}
     - Class: 114
-      Script: {instanceID: 11434}
+      Script: {instanceID: 11422}
     - Class: 114
-      Script: {instanceID: 11920}
+      Script: {instanceID: 11908}
     - Class: 114
-      Script: {instanceID: 12420}
+      Script: {instanceID: 12412}
     - Class: 114
-      Script: {instanceID: 12660}
+      Script: {instanceID: 12656}
     - Class: 114
-      Script: {instanceID: 12860}
+      Script: {instanceID: 12856}
     - Class: 114
       Script: {instanceID: 13020}
     - Class: 114
@@ -231,31 +252,35 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11196}
+      Script: {instanceID: 11184}
     - Class: 114
-      Script: {instanceID: 11388}
+      Script: {instanceID: 11376}
     - Class: 114
-      Script: {instanceID: 11434}
+      Script: {instanceID: 11422}
     - Class: 114
-      Script: {instanceID: 11564}
+      Script: {instanceID: 11552}
     - Class: 114
-      Script: {instanceID: 11774}
+      Script: {instanceID: 11908}
     - Class: 114
-      Script: {instanceID: 11920}
+      Script: {instanceID: 12066}
     - Class: 114
-      Script: {instanceID: 12286}
+      Script: {instanceID: 12278}
     - Class: 114
-      Script: {instanceID: 12420}
+      Script: {instanceID: 12412}
     - Class: 114
-      Script: {instanceID: 12474}
+      Script: {instanceID: 12468}
     - Class: 114
-      Script: {instanceID: 12860}
+      Script: {instanceID: 12856}
+    - Class: 114
+      Script: {instanceID: 13010}
     - Class: 114
       Script: {instanceID: 13020}
     - Class: 114
       Script: {instanceID: 13478}
     - Class: 114
       Script: {instanceID: 13508}
+    - Class: 114
+      Script: {instanceID: 30446}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -292,21 +317,21 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11196}
+      Script: {instanceID: 11184}
     - Class: 114
-      Script: {instanceID: 11388}
+      Script: {instanceID: 11376}
     - Class: 114
-      Script: {instanceID: 11434}
+      Script: {instanceID: 11422}
     - Class: 114
-      Script: {instanceID: 11436}
+      Script: {instanceID: 11424}
     - Class: 114
-      Script: {instanceID: 11920}
+      Script: {instanceID: 11908}
     - Class: 114
-      Script: {instanceID: 12420}
+      Script: {instanceID: 12412}
     - Class: 114
-      Script: {instanceID: 12442}
+      Script: {instanceID: 12434}
     - Class: 114
-      Script: {instanceID: 12860}
+      Script: {instanceID: 12856}
     - Class: 114
       Script: {instanceID: 13020}
     - Class: 114
@@ -524,12 +549,6 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 35ec97400fd57993e189a9a878318af3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: hidePomodoro
-  - hash:
-      serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -608,6 +627,12 @@ ScriptsOnlyBuild:
     className: AREnvironmentProbeManager
   - hash:
       serializedVersion: 2
+      Hash: fb010b4e2b161f29c349e636e5192d97
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: canvasVisibility
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
@@ -672,6 +697,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 6458e85df1a83713dd0aa2d47c4e5558
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LightEstimator
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -828,6 +859,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AudioTrack
+  - hash:
+      serializedVersion: 2
+      Hash: d25eee9f20609526975bb5c9d6a33e25
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InventoryController
   - hash:
       serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
@@ -1020,6 +1057,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 1b2695beb2f11ec8bb8296badff394e5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AddSuculentPanelVisibility
   platform: 13
   scenePathNames:
   - Assets/Scenes/StartScene.unity
@@ -1027,4 +1070,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/PietrarioListScene.unity
   - Assets/Scenes/PietrarioScene.unity
   - Assets/Scenes/ARScene.unity
-  playerPath: C:/Users/Cristian Arenas C/Desktop/pietrario/example/unity/practicaPomodoro/Builds/30-04-2020v4.apk
+  playerPath: C:/Users/Cristian Arenas C/Desktop/pietrario/example/unity/practicaPomodoro/Builds/02-05-2020.apk
