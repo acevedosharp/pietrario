@@ -17,6 +17,7 @@ public class AddSuculentPanelVisibility : MonoBehaviour
         Panel1();
         Panel2();
         Panel3();
+        
     }
 
     public void Panel1()

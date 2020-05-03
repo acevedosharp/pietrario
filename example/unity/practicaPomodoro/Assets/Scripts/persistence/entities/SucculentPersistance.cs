@@ -24,12 +24,13 @@ public class SucculentPersistance : MonoBehaviour
     [SerializeField] Text suc1;
     [SerializeField] Text suc2;
     [SerializeField] Text suc3;
-
+    [SerializeField] GameObject princiPietrario;
     [SerializeField] Image succulentLive1;
     [SerializeField] Image succulentLive2;
     [SerializeField] Image succulentLive3;
     float maxLive1=100, maxLive2=100, maxLive3=100;
     private Pietrario pietrario;
+    private GameObject succ1,succ2,succ3;
     
 
     void Start()
@@ -124,41 +125,43 @@ public class SucculentPersistance : MonoBehaviour
 
     public void renderSucculent()
     {
-        if (pietrario.s1==null)
+        buttonSucculent1.SetActive(true);
+        buttonSucculentCopy1.SetActive(true);
+        live1.enabled=false;
+        mask1.enabled = false;
+        suc1.enabled = false;
+        succulentLive1.enabled = false;
+        
+        buttonSucculent2.SetActive(true);
+        buttonSucculentCopy2.SetActive(true);
+        live2.enabled = false;
+        mask2.enabled = false;
+        suc2.enabled = false;
+        succulentLive2.enabled = false;
+        
+        buttonSucculent3.SetActive(true);
+        buttonSucculentCopy3.SetActive(true);
+        live3.enabled = false;
+        mask3.enabled = false;
+        suc3.enabled = false;
+        succulentLive3.enabled = false;
+        
+        
+        if (pietrario.s1!=null)
         {
-            succulent1.SetActive(false);
-            buttonSucculent1.SetActive(true);
-            buttonSucculentCopy1.SetActive(true);
-            live1.enabled=false;
-            mask1.enabled = false;
-            suc1.enabled = false;
-            succulentLive1.enabled = false;
-
-
-        }
-        else
-        {
-            succulent1.SetActive(true);
             buttonSucculent1.SetActive(false);
-            buttonSucculentCopy1.SetActive(false);
-            live1.enabled = true;
-            mask1.enabled = true;
-            suc1.enabled = true;
-            succulentLive1.enabled = true;
-        }
-        if (pietrario.s2==null)
-        {
-            succulent2.SetActive(false);
-            buttonSucculent2.SetActive(true);
-            buttonSucculentCopy2.SetActive(true);
-            live2.enabled = false;
-            mask2.enabled = false;
-            suc2.enabled = false;
-            succulentLive2.enabled = false;
+                buttonSucculentCopy1.SetActive(false);
+                live1.enabled = true;
+                mask1.enabled = true;
+                suc1.enabled = true;
+                succulentLive1.enabled = true;
         }
         else
         {
-            succulent2.SetActive(true);
+            Destroy(succ1);
+        }
+        if (pietrario.s2!=null)
+        {
             buttonSucculent2.SetActive(false);
             buttonSucculentCopy2.SetActive(false);
             live2.enabled = true;
@@ -166,19 +169,13 @@ public class SucculentPersistance : MonoBehaviour
             suc2.enabled = true;
             succulentLive2.enabled = true;
         }
-        if (pietrario.s3==null)
-        {
-            succulent3.SetActive(false);
-            buttonSucculent3.SetActive(true);
-            buttonSucculentCopy3.SetActive(true);
-            live3.enabled = false;
-            mask3.enabled = false;
-            suc3.enabled = false;
-            succulentLive3.enabled = false;
-        }
         else
         {
-            succulent3.SetActive(true);
+            Destroy(succ2);
+        }
+
+        if (pietrario.s3 != null)
+        {
             buttonSucculent3.SetActive(false);
             buttonSucculentCopy3.SetActive(false);
             live3.enabled = true;
@@ -186,29 +183,117 @@ public class SucculentPersistance : MonoBehaviour
             suc3.enabled = true;
             succulentLive3.enabled = true;
         }
+        else
+        {
+            Destroy(succ3);
+        }
     }
 
-    public void enableSucculent1()
+    public void enableSucculent1(int i)
     {
-        pietrario.s1=SucculentRepository.find("SUC1");
-        pietrario.s1wl = 100;
-        pietrario.Save();
-        this.renderSucculent();
+        if (i==0)
+        {
+            pietrario.s1 = SucculentRepository.find("SUC1");
+            pietrario.s1wl = 100;
+            pietrario.Save();
+            succ1 = Instantiate(succulent1,new Vector3(15,597,285),succulent1.transform.rotation);
+            succ1.transform.parent = princiPietrario.transform;
+            succ1.transform.localScale=new Vector3(5,5,5);
+            this.renderSucculent();
+        }
+
+        if (i==1)
+        {
+            pietrario.s1 = SucculentRepository.find("SUC2");
+            pietrario.s1wl = 100;
+            succ1 = Instantiate(succulent2,new Vector3(15,597,285),succulent2.transform.rotation);
+            succ1.transform.parent = princiPietrario.transform;
+            succ1.transform.localScale=new Vector3(5,5,5);
+            pietrario.Save();
+            this.renderSucculent();
+        }
+        if (i==2)
+        {
+            pietrario.s1 = SucculentRepository.find("SUC3");
+            pietrario.s1wl = 100;
+            succ1 = Instantiate(succulent3,new Vector3(15,597,285),succulent3.transform.rotation);
+            
+            succ1.transform.parent = princiPietrario.transform;
+            succ1.transform.localScale=new Vector3(5,5,5);
+            pietrario.Save();
+            this.renderSucculent();
+        }
     }
-    public void enableSucculent2()
+    public void enableSucculent2(int i)
     {
-        pietrario.s2=SucculentRepository.find("SUC2") ;
-        pietrario.s2wl = 100;
-        pietrario.Save();
-        this.renderSucculent();
+        
+        if (i==0)
+        {
+            pietrario.s2 = SucculentRepository.find("SUC1");
+            pietrario.s2wl = 100;
+            succ2 = Instantiate(succulent1,new Vector3(297,658.5f,419.5f),succulent1.transform.rotation);
+            succ2.transform.parent = princiPietrario.transform;
+            succ2.transform.localScale=new Vector3(5,5,5);
+            pietrario.Save();
+            this.renderSucculent();
+        }
+
+        if (i==1)
+        {
+            pietrario.s2 = SucculentRepository.find("SUC2");
+            pietrario.s2wl = 100;
+            succ2 = Instantiate(succulent2,new Vector3(297,658.5f,419.5f),succulent2.transform.rotation);
+            succ2.transform.parent = princiPietrario.transform;
+            succ2.transform.localScale=new Vector3(5,5,5);
+            pietrario.Save();
+            this.renderSucculent();
+        }
+        if (i==2)
+        {
+            pietrario.s2 = SucculentRepository.find("SUC3");
+            pietrario.s2wl = 100;
+            succ2 = Instantiate(succulent3,new Vector3(297,658.5f,419.5f),succulent3.transform.rotation);
+            succ2.transform.parent = princiPietrario.transform;
+            succ2.transform.localScale=new Vector3(5,5,5);
+            pietrario.Save();
+            this.renderSucculent();
+        }
          
     }
-    public void enableSucculent3()
+    public void enableSucculent3(int i)
     {
-        pietrario.s3=SucculentRepository.find("SUC3") ;
-        pietrario.s3wl = 100;
-        pietrario.Save();
-        this.renderSucculent();
+        if (i==0)
+        {
+            pietrario.s3 = SucculentRepository.find("SUC1");
+            pietrario.s3wl = 100;
+            succ3 = Instantiate(succulent1,new Vector3(565.5f,594.5f,189.5f),succulent1.transform.rotation);
+            succ3.transform.parent = princiPietrario.transform;
+            succ3.transform.localScale=new Vector3(5,5,5);
+            pietrario.Save();
+            
+            this.renderSucculent();
+        }
+
+        if (i==1)
+        {
+            pietrario.s3 = SucculentRepository.find("SUC2");
+            pietrario.s3wl = 100;
+            succ3 = Instantiate(succulent2,new Vector3(565.5f,594.5f,189.5f),succulent2.transform.rotation);
+            succ3.transform.parent = princiPietrario.transform;
+            succ3.transform.localScale=new Vector3(5,5,5);
+            pietrario.Save();
+            this.renderSucculent();
+        }
+        if (i==2)
+        {
+            pietrario.s3 = SucculentRepository.find("SUC3");
+            pietrario.s3wl = 100;
+            succ3 = Instantiate(succulent3,new Vector3(565.5f,594.5f,189.5f),succulent3.transform.rotation);
+            succ3.transform.parent = princiPietrario.transform;
+            succ3.transform.localScale=new Vector3(5,5,5);
+            pietrario.Save();
+            this.renderSucculent();
+        }
     }
         
     
