@@ -223,6 +223,7 @@ public class SucculentPersistance : MonoBehaviour
             pietrario.Save();
             this.renderSucculent();
         }
+        print("Ejecutado Zona 1");
     }
     public void enableSucculent2(int i)
     {
@@ -258,7 +259,7 @@ public class SucculentPersistance : MonoBehaviour
             pietrario.Save();
             this.renderSucculent();
         }
-         
+        print("Ejecutado Zona 2");
     }
     public void enableSucculent3(int i)
     {
@@ -294,6 +295,7 @@ public class SucculentPersistance : MonoBehaviour
             pietrario.Save();
             this.renderSucculent();
         }
+        print("Ejecutado Zona 3");
     }
         
     

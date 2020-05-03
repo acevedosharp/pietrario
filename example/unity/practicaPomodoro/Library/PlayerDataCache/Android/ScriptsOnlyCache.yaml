@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - ChangeScenes
     - GradientScript
     - InventoryController
+    - InventorySlides
     - LightEstimator
     - MainMenuController
     - MoveOnTouch
@@ -16,6 +17,9 @@ ScriptsOnlyBuild:
     - SpawnPietrario
     - SucculentPersistance
     - TimeMaster
+    - UpdateSucButton
+    - UpdateSucButton2
+    - UpdateSucButton3
     - canvasVisibility
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.RiderScriptEditorData
@@ -69,39 +73,39 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11184}
+      Script: {instanceID: 11318}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11512}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11598}
     - Class: 114
-      Script: {instanceID: 11618}
+      Script: {instanceID: 11754}
     - Class: 114
-      Script: {instanceID: 11818}
+      Script: {instanceID: 11952}
     - Class: 114
-      Script: {instanceID: 11908}
+      Script: {instanceID: 12042}
     - Class: 114
-      Script: {instanceID: 12010}
+      Script: {instanceID: 12144}
     - Class: 114
-      Script: {instanceID: 12452}
+      Script: {instanceID: 12586}
     - Class: 114
-      Script: {instanceID: 12680}
+      Script: {instanceID: 12814}
     - Class: 114
-      Script: {instanceID: 12792}
+      Script: {instanceID: 12926}
     - Class: 114
-      Script: {instanceID: 12888}
+      Script: {instanceID: 13022}
     - Class: 114
-      Script: {instanceID: 13020}
+      Script: {instanceID: 13152}
     - Class: 114
-      Script: {instanceID: 13048}
+      Script: {instanceID: 13180}
     - Class: 114
-      Script: {instanceID: 13226}
+      Script: {instanceID: 13358}
     - Class: 114
-      Script: {instanceID: 13368}
+      Script: {instanceID: 13500}
     - Class: 114
-      Script: {instanceID: 13478}
+      Script: {instanceID: 13610}
     - Class: 114
-      Script: {instanceID: 13484}
+      Script: {instanceID: 13616}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -136,27 +140,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11184}
+      Script: {instanceID: 11318}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11512}
     - Class: 114
-      Script: {instanceID: 11422}
+      Script: {instanceID: 11558}
     - Class: 114
-      Script: {instanceID: 11866}
+      Script: {instanceID: 12000}
     - Class: 114
-      Script: {instanceID: 11908}
+      Script: {instanceID: 12042}
     - Class: 114
-      Script: {instanceID: 12412}
+      Script: {instanceID: 12546}
     - Class: 114
-      Script: {instanceID: 12654}
+      Script: {instanceID: 12788}
     - Class: 114
-      Script: {instanceID: 12856}
+      Script: {instanceID: 12990}
     - Class: 114
-      Script: {instanceID: 13010}
+      Script: {instanceID: 13142}
     - Class: 114
-      Script: {instanceID: 13020}
+      Script: {instanceID: 13152}
     - Class: 114
-      Script: {instanceID: 13478}
+      Script: {instanceID: 13610}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -193,23 +197,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11184}
+      Script: {instanceID: 11318}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11512}
     - Class: 114
-      Script: {instanceID: 11422}
+      Script: {instanceID: 11558}
     - Class: 114
-      Script: {instanceID: 11908}
+      Script: {instanceID: 12042}
     - Class: 114
-      Script: {instanceID: 12412}
+      Script: {instanceID: 12546}
     - Class: 114
-      Script: {instanceID: 12656}
+      Script: {instanceID: 12790}
     - Class: 114
-      Script: {instanceID: 12856}
+      Script: {instanceID: 12990}
     - Class: 114
-      Script: {instanceID: 13020}
+      Script: {instanceID: 13152}
     - Class: 114
-      Script: {instanceID: 13478}
+      Script: {instanceID: 13610}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -252,35 +256,43 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11184}
+      Script: {instanceID: 11318}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11328}
     - Class: 114
-      Script: {instanceID: 11422}
+      Script: {instanceID: 11512}
     - Class: 114
-      Script: {instanceID: 11552}
+      Script: {instanceID: 11558}
     - Class: 114
-      Script: {instanceID: 11908}
+      Script: {instanceID: 11688}
     - Class: 114
-      Script: {instanceID: 12066}
+      Script: {instanceID: 12042}
     - Class: 114
-      Script: {instanceID: 12278}
+      Script: {instanceID: 12200}
     - Class: 114
       Script: {instanceID: 12412}
     - Class: 114
-      Script: {instanceID: 12468}
+      Script: {instanceID: 12546}
     - Class: 114
-      Script: {instanceID: 12856}
+      Script: {instanceID: 12602}
     - Class: 114
-      Script: {instanceID: 13010}
+      Script: {instanceID: 12990}
     - Class: 114
-      Script: {instanceID: 13020}
+      Script: {instanceID: 13142}
     - Class: 114
-      Script: {instanceID: 13478}
+      Script: {instanceID: 13152}
     - Class: 114
-      Script: {instanceID: 13508}
+      Script: {instanceID: 13610}
     - Class: 114
-      Script: {instanceID: 30446}
+      Script: {instanceID: 13640}
+    - Class: 114
+      Script: {instanceID: 30598}
+    - Class: 114
+      Script: {instanceID: 75366}
+    - Class: 114
+      Script: {instanceID: 80884}
+    - Class: 114
+      Script: {instanceID: 80890}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -317,27 +329,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11184}
+      Script: {instanceID: 11318}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11512}
     - Class: 114
-      Script: {instanceID: 11422}
+      Script: {instanceID: 11558}
     - Class: 114
-      Script: {instanceID: 11424}
+      Script: {instanceID: 11560}
     - Class: 114
-      Script: {instanceID: 11908}
+      Script: {instanceID: 12042}
     - Class: 114
-      Script: {instanceID: 12412}
+      Script: {instanceID: 12546}
     - Class: 114
-      Script: {instanceID: 12434}
+      Script: {instanceID: 12568}
     - Class: 114
-      Script: {instanceID: 12856}
+      Script: {instanceID: 12990}
     - Class: 114
-      Script: {instanceID: 13020}
+      Script: {instanceID: 13152}
     - Class: 114
-      Script: {instanceID: 13396}
+      Script: {instanceID: 13528}
     - Class: 114
-      Script: {instanceID: 13478}
+      Script: {instanceID: 13610}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -361,6 +373,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 1b2695beb2f11ec8bb8296badff394e5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AddSuculentPanelVisibility
   - hash:
       serializedVersion: 2
       Hash: 3c08375166df118bd1801438fc36b92f
@@ -663,7 +681,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: f30a36d9c112f54ec85a12217954f0b8
+      Hash: 8a2b3104ab21ab3d328ea59798ae0219
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SucculentPersistance
@@ -861,7 +879,7 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
-      Hash: d25eee9f20609526975bb5c9d6a33e25
+      Hash: 464da3592001e6f14643068ba3be7596
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InventoryController
@@ -1059,10 +1077,28 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 1b2695beb2f11ec8bb8296badff394e5
+      Hash: be5d7a62492fbb26aba388577aab86fc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: AddSuculentPanelVisibility
+    className: InventorySlides
+  - hash:
+      serializedVersion: 2
+      Hash: 3c8dc02739eb21b084412eddd5c80031
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UpdateSucButton
+  - hash:
+      serializedVersion: 2
+      Hash: 3c8dc02739eb21b084412eddd5c80031
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UpdateSucButton2
+  - hash:
+      serializedVersion: 2
+      Hash: 3c8dc02739eb21b084412eddd5c80031
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UpdateSucButton3
   platform: 13
   scenePathNames:
   - Assets/Scenes/StartScene.unity
@@ -1070,4 +1106,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/PietrarioListScene.unity
   - Assets/Scenes/PietrarioScene.unity
   - Assets/Scenes/ARScene.unity
-  playerPath: C:/Users/Cristian Arenas C/Desktop/pietrario/example/unity/practicaPomodoro/Builds/02-05-2020.apk
+  playerPath: C:/Users/Cristian Arenas C/Desktop/pietrario/example/unity/practicaPomodoro/Builds/03-05-2020.apk

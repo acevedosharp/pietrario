@@ -8,7 +8,7 @@ public class Inventory
         return PlayerPrefs.GetInt("inv_quantity_" + refId);
     }
 
-    public static void addCantidadByReferencedItem(string refId, int cantidad)
+    public static void updateCantidadByReferencedItem(string refId, int cantidad)
     {
         PlayerPrefs.SetInt("inv_quantity_" + refId, cantidad);
     }
