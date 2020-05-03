@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{B17BEE93-2C99-0324-EEF2-C740223F767F}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/persistence/entities/SucculentPersistance.cs">
+    <Files>
+      <File FileName="Assets/Scripts/persistence/entities/SucculentPersistance.cs" Line="286" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="practicaPomodoro" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="persistence" expanded="True">
+                  <Node name="entities" expanded="True">
+                    <Node name="SucculentPersistance.cs" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f34c860d-1567-4926-8caa-0a4611977400" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

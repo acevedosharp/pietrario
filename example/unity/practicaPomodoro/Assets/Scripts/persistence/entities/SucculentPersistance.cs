@@ -208,7 +208,7 @@ public class SucculentPersistance : MonoBehaviour
             pietrario.s1wl = 100;
             succ1 = Instantiate(succulent2,new Vector3(15,597,285),succulent2.transform.rotation);
             succ1.transform.parent = princiPietrario.transform;
-            succ1.transform.localScale=new Vector3(5,5,5);
+            succ1.transform.localScale=new Vector3(80,80,80);
             pietrario.Save();
             this.renderSucculent();
         }
@@ -219,7 +219,7 @@ public class SucculentPersistance : MonoBehaviour
             succ1 = Instantiate(succulent3,new Vector3(15,597,285),succulent3.transform.rotation);
             
             succ1.transform.parent = princiPietrario.transform;
-            succ1.transform.localScale=new Vector3(5,5,5);
+            succ1.transform.localScale=new Vector3(20,20,20);
             pietrario.Save();
             this.renderSucculent();
         }
@@ -244,7 +244,7 @@ public class SucculentPersistance : MonoBehaviour
             pietrario.s2wl = 100;
             succ2 = Instantiate(succulent2,new Vector3(297,658.5f,419.5f),succulent2.transform.rotation);
             succ2.transform.parent = princiPietrario.transform;
-            succ2.transform.localScale=new Vector3(5,5,5);
+            succ2.transform.localScale=new Vector3(80,80,80);
             pietrario.Save();
             this.renderSucculent();
         }
@@ -254,7 +254,7 @@ public class SucculentPersistance : MonoBehaviour
             pietrario.s2wl = 100;
             succ2 = Instantiate(succulent3,new Vector3(297,658.5f,419.5f),succulent3.transform.rotation);
             succ2.transform.parent = princiPietrario.transform;
-            succ2.transform.localScale=new Vector3(5,5,5);
+            succ2.transform.localScale=new Vector3(20,20,20);
             pietrario.Save();
             this.renderSucculent();
         }
@@ -280,7 +280,7 @@ public class SucculentPersistance : MonoBehaviour
             pietrario.s3wl = 100;
             succ3 = Instantiate(succulent2,new Vector3(565.5f,594.5f,189.5f),succulent2.transform.rotation);
             succ3.transform.parent = princiPietrario.transform;
-            succ3.transform.localScale=new Vector3(5,5,5);
+            succ3.transform.localScale=new Vector3(80,80,80);
             pietrario.Save();
             this.renderSucculent();
         }
@@ -290,7 +290,7 @@ public class SucculentPersistance : MonoBehaviour
             pietrario.s3wl = 100;
             succ3 = Instantiate(succulent3,new Vector3(565.5f,594.5f,189.5f),succulent3.transform.rotation);
             succ3.transform.parent = princiPietrario.transform;
-            succ3.transform.localScale=new Vector3(5,5,5);
+            succ3.transform.localScale=new Vector3(20,20,20);
             pietrario.Save();
             this.renderSucculent();
         }
