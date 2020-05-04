@@ -44,11 +44,11 @@ public class PietrarioRepository
 
             string s2Snapshot = PlayerPrefs.GetString("id_suc_2_piet_" + 1);
             if (!s2Snapshot.Equals("null"))
-                s2Obj = SucculentRepository.find(s1Snapshot);
+                s2Obj = SucculentRepository.find(s2Snapshot);
 
             string s3Snapshot = PlayerPrefs.GetString("id_suc_3_piet_" + 1);
             if (!s3Snapshot.Equals("null"))
-                s3Obj = SucculentRepository.find(s1Snapshot);
+                s3Obj = SucculentRepository.find(s3Snapshot);
 
             // Create and add existing Pietrarios to memory.
             Pietrario p = new Pietrario(
