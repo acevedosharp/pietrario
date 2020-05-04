@@ -9150,8 +9150,8 @@ GameObject:
   - component: {fileID: 2139670576}
   - component: {fileID: 2139670575}
   - component: {fileID: 2139670574}
-  - component: {fileID: 2139670573}
   - component: {fileID: 2139670579}
+  - component: {fileID: 2139670573}
   - component: {fileID: 2139670580}
   - component: {fileID: 2139670581}
   - component: {fileID: 2139670582}

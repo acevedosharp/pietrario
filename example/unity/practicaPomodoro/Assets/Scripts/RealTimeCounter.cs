@@ -20,9 +20,9 @@ public class RealTimeCounter : MonoBehaviour {
         tempseg = 0;
         instance = this;
         //this.enabled = false;
-        print (timer);
-        print (TimeMaster.instance.CheckDate () [0]);
-        print (TimeMaster.instance.CheckDate () [1]);
+        //print (timer);
+        //print (TimeMaster.instance.CheckDate () [0]);
+        //print (TimeMaster.instance.CheckDate () [1]);
     }
     void Update () {
         if (timer > 0) {

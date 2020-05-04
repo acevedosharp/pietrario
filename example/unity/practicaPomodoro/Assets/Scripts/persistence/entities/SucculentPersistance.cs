@@ -84,19 +84,23 @@ public class SucculentPersistance : MonoBehaviour
     }
     public void updateS2wl()
     {
+       
         long timeDelta = DateTime.Now.Ticks - pietrario.dtS2;
         TimeSpan timePassed = new TimeSpan(timeDelta);
 
         if (Math.Floor(timePassed.TotalSeconds) > 0 && pietrario.s2wl > 0)
         {
-            pietrario.s2wl -= pietrario.s2.waterDecayIndex * Convert.ToSingle(Math.Floor(timePassed.TotalSeconds));
+           
+                pietrario.s2wl -= pietrario.s2.waterDecayIndex * Convert.ToSingle(Math.Floor(timePassed.TotalSeconds));
+            
+            
             succulentLive2.fillAmount = pietrario.s2wl / maxLive2;
             suc2.text = pietrario.s2wl.ToString();
+
             pietrario.dtS2 = DateTime.Now.Ticks;
         }
         if (pietrario.s2wl <= 0)
         {
-            Debug.Log("Hola que hace"+ pietrario.s2wl.ToString());
             pietrario.s2 = null;
 
             pietrario.Save();
@@ -152,7 +156,6 @@ public class SucculentPersistance : MonoBehaviour
 
         if (pietrario.s1 != null)
         {
-            Debug.Log("suc1: "+ pietrario.s1.persistentId);
             if (pietrario.s1.persistentId=="SUC1" && succ1==null)
             {
                 succ1 = Instantiate(succulent1, new Vector3(15, 597, 285), succulent1.transform.rotation);
@@ -184,7 +187,6 @@ public class SucculentPersistance : MonoBehaviour
         }
         if (pietrario.s2 != null)
         {
-            Debug.Log("suc2: " + pietrario.s2.persistentId);
             if (pietrario.s2.persistentId=="SUC1" && succ2==null)
             {
                 succ2 = Instantiate(succulent1, new Vector3(297, 658.5f, 419.5f), succulent1.transform.rotation);
@@ -217,7 +219,6 @@ public class SucculentPersistance : MonoBehaviour
 
         if (pietrario.s3 != null)
         {
-            Debug.Log("suc3: " + pietrario.s3.persistentId);
             if (pietrario.s3.persistentId=="SUC1" && succ3==null)
             {
                 succ3 = Instantiate(succulent1, new Vector3(565.5f, 594.5f, 189.5f), succulent1.transform.rotation);
@@ -255,11 +256,11 @@ public class SucculentPersistance : MonoBehaviour
         {
             pietrario.s1 = SucculentRepository.find("SUC1");
             pietrario.s1wl = 100;
-            pietrario.Save();
+
             succ1 = Instantiate(succulent1, new Vector3(15, 597, 285), succulent1.transform.rotation);
             succ1.transform.parent = princiPietrario.transform;
             succ1.transform.localScale = new Vector3(5, 5, 5);
-            this.renderSucculent();
+
         }
 
         if (i == 1)
@@ -269,21 +270,18 @@ public class SucculentPersistance : MonoBehaviour
             succ1 = Instantiate(succulent2, new Vector3(15, 597, 285), succulent2.transform.rotation);
             succ1.transform.parent = princiPietrario.transform;
             succ1.transform.localScale = new Vector3(80, 80, 80);
-            pietrario.Save();
-            this.renderSucculent();
         }
         if (i == 2)
         {
             pietrario.s1 = SucculentRepository.find("SUC3");
             pietrario.s1wl = 100;
             succ1 = Instantiate(succulent3, new Vector3(15, 597, 285), succulent3.transform.rotation);
-
             succ1.transform.parent = princiPietrario.transform;
             succ1.transform.localScale = new Vector3(20, 20, 20);
-            pietrario.Save();
-            this.renderSucculent();
         }
-        print("Ejecutado Zona 1");
+        pietrario.dtS1 = DateTime.Now.Ticks;
+        pietrario.Save();
+        this.renderSucculent();
     }
     public void enableSucculent2(int i)
     {
@@ -291,9 +289,7 @@ public class SucculentPersistance : MonoBehaviour
         if (i == 0)
         {
             pietrario.s2 = SucculentRepository.find("SUC1");
-            Debug.Log("primero "+pietrario.s2wl.ToString());
             pietrario.s2wl = 100;
-            Debug.Log("Segundo: "+pietrario.s2wl.ToString());
             succ2 = Instantiate(succulent1, new Vector3(297, 658.5f, 419.5f), succulent1.transform.rotation);
             succ2.transform.parent = princiPietrario.transform;
             succ2.transform.localScale = new Vector3(5, 5, 5);
@@ -320,6 +316,7 @@ public class SucculentPersistance : MonoBehaviour
             succ2.transform.localScale = new Vector3(20, 20, 20);
 
         }
+        pietrario.dtS2= DateTime.Now.Ticks; 
         pietrario.Save();
         this.renderSucculent();
 
@@ -333,8 +330,6 @@ public class SucculentPersistance : MonoBehaviour
             succ3 = Instantiate(succulent1, new Vector3(565.5f, 594.5f, 189.5f), succulent1.transform.rotation);
             succ3.transform.parent = princiPietrario.transform;
             succ3.transform.localScale = new Vector3(5, 5, 5);
-            pietrario.Save();
-            this.renderSucculent();
         }
 
         if (i == 1)
@@ -344,8 +339,6 @@ public class SucculentPersistance : MonoBehaviour
             succ3 = Instantiate(succulent2, new Vector3(565.5f, 594.5f, 189.5f), succulent2.transform.rotation);
             succ3.transform.parent = princiPietrario.transform;
             succ3.transform.localScale = new Vector3(80, 80, 80);
-            pietrario.Save();
-            this.renderSucculent();
         }
         if (i == 2)
         {
@@ -354,10 +347,10 @@ public class SucculentPersistance : MonoBehaviour
             succ3 = Instantiate(succulent3, new Vector3(565.5f, 594.5f, 189.5f), succulent3.transform.rotation);
             succ3.transform.parent = princiPietrario.transform;
             succ3.transform.localScale = new Vector3(20, 20, 20);
-            pietrario.Save();
-            this.renderSucculent();
         }
-        print("Ejecutado Zona 3");
+        pietrario.dtS3 = DateTime.Now.Ticks;
+        pietrario.Save();
+        this.renderSucculent();
     }
 
 
