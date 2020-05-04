@@ -23,9 +23,9 @@ public class InventoryController : MonoBehaviour
         
         //Normalmente el usuario deberia iniciar con una suculenta, de tipo 1, pero para pruebas mas adelante, se crearán
         // 3 entidades de cada item
-        Inventory.updateCantidadByReferencedItem("SUC1",3);
-        Inventory.updateCantidadByReferencedItem("SUC2",3);
-        Inventory.updateCantidadByReferencedItem("SUC3",3);
+        Inventory.updateCantidadByReferencedItem("SUC1",2);
+        Inventory.updateCantidadByReferencedItem("SUC2",2);
+        Inventory.updateCantidadByReferencedItem("SUC3",2);
         Inventory.updateCantidadByReferencedItem("GUA1",1);
         Inventory.updateCantidadByReferencedItem("GUA2",1);
         Inventory.updateCantidadByReferencedItem("GUA3",1);

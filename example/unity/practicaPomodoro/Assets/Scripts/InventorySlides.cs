@@ -33,8 +33,7 @@ public class InventorySlides : MonoBehaviour
     {
         slide1.SetActive(false);
         slide2.SetActive(true);
-    
-       
+        
     }
 
     public void Left()
