@@ -15,6 +15,13 @@ public class SucculentPersistance : MonoBehaviour
     [SerializeField] GameObject buttonSucculentCopy1;
     [SerializeField] GameObject buttonSucculentCopy2;
     [SerializeField] GameObject buttonSucculentCopy3;
+    
+    
+    [SerializeField] GameObject buttonTools1;
+    [SerializeField] GameObject buttonTools2;
+    [SerializeField] GameObject buttonTools3;
+    
+    
     [SerializeField] Image live1;
     [SerializeField] Image live2;
     [SerializeField] Image live3;
@@ -39,6 +46,9 @@ public class SucculentPersistance : MonoBehaviour
 
         renderSucculent();
 
+        buttonTools1.SetActive(false);
+        buttonTools2.SetActive(false);
+        buttonTools3.SetActive(false);
     }
 
     private void Update()
@@ -282,6 +292,8 @@ public class SucculentPersistance : MonoBehaviour
         pietrario.dtS1 = DateTime.Now.Ticks;
         pietrario.Save();
         this.renderSucculent();
+        
+        buttonTools1.SetActive(true);
     }
     public void enableSucculent2(int i)
     {
@@ -319,7 +331,7 @@ public class SucculentPersistance : MonoBehaviour
         pietrario.dtS2= DateTime.Now.Ticks; 
         pietrario.Save();
         this.renderSucculent();
-
+        buttonTools2.SetActive(true);
     }
     public void enableSucculent3(int i)
     {
@@ -351,7 +363,28 @@ public class SucculentPersistance : MonoBehaviour
         pietrario.dtS3 = DateTime.Now.Ticks;
         pietrario.Save();
         this.renderSucculent();
+        buttonTools3.SetActive(true);
     }
 
+    public void updateWaterLevel(String suctype)
+    {
+      
+        if (suctype == "SUC1")
+        {
+            pietrario.s1wl = 100;
+            renderSucculent();
+            pietrario.Save();
+        }else if (suctype == "SUC2")
+        {
+            pietrario.s2wl = 100;
+            renderSucculent();
+            pietrario.Save();
+        }else if (suctype == "SUC3")
+        {
+            pietrario.s3wl = 100;
+            renderSucculent();
+            pietrario.Save();
+        }
+    }
 
 }

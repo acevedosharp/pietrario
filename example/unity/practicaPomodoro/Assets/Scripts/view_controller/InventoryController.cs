@@ -62,19 +62,10 @@ public class InventoryController : MonoBehaviour
         int decreaded_quantity = Int32.Parse(items[1]);
         int actual_quantity = Inventory.getCantidadByReferencedItem(id);
         
-        //Se actualiza a el nuevo valor con una verificación por si algo 
-        if (decreaded_quantity <= actual_quantity)
-        {
+       
             Inventory.updateCantidadByReferencedItem(id, (actual_quantity - decreaded_quantity));
             print("Ahora hay " + Inventory.getCantidadByReferencedItem(id) + " items de " + id);
-        }
-        else
-        {
-            /*Se supone que esto nunca va a pasar pues se habilitan o deshabilitan los botones dependiendo de
-            si hay o no items*/
-            
-            print("Imposible restar esa cantidad de items");
-        }
+
 
 
     }
@@ -90,11 +81,19 @@ public class InventoryController : MonoBehaviour
         string id = items[0];
         int increase_quantity = Int32.Parse(items[1]);
         int actual_quantity = Inventory.getCantidadByReferencedItem(id);
-            Inventory.updateCantidadByReferencedItem(id, (actual_quantity + increase_quantity));
-            print("Ahora hay " + Inventory.getCantidadByReferencedItem(id) + " items de " + id);
-     
+        
+        Inventory.updateCantidadByReferencedItem(id, (actual_quantity + increase_quantity));
+           
 
+    }
 
+    public void waterSucculent(String suctype)
+    {
+        int wat_q = Inventory.getCantidadByReferencedItem("AGUA");
+        Inventory.updateCantidadByReferencedItem("AGUA",(wat_q-1));
+        
+        SucculentPersistance succulentPersistance= new SucculentPersistance();
+        succulentPersistance.updateWaterLevel(suctype);
     }
 
 
