@@ -78,6 +78,24 @@ public class InventoryController : MonoBehaviour
 
 
     }
+    public void increaseItem(string id_quantity)
+    {
+        //Caracteres a tener en cuenta para el Split y máximo numero de resultados que devuelve
+        char[] separator = { '.' };
+        int max = 2;
+        //Metodo de Split devuelve un array
+        string[] items = id_quantity.Split(separator, max);
+
+        //Se guardan en variables independientes el id, el numero de items a reducir y el numero de items actuales
+        string id = items[0];
+        int increase_quantity = Int32.Parse(items[1]);
+        int actual_quantity = Inventory.getCantidadByReferencedItem(id);
+            Inventory.updateCantidadByReferencedItem(id, (actual_quantity + increase_quantity));
+            print("Ahora hay " + Inventory.getCantidadByReferencedItem(id) + " items de " + id);
+     
+
+
+    }
 
 
 }

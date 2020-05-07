@@ -9,31 +9,73 @@ public class RealTimeCounter : MonoBehaviour {
     public float timerSetUpMin;
     public int tempseg;
     public float timerTemp;
+    public int compWarn;
     public static RealTimeCounter instance;
     [SerializeField] Text timerLabel;
     [SerializeField] Text textTimer;
+     [SerializeField] GameObject suc1;
+    [SerializeField] GameObject suc2;
+    [SerializeField] GameObject suc3;
+    [SerializeField] GameObject rewardPanel;
+    InventoryController inv = new InventoryController();
     void Start () {
+        if (PlayerPrefs.GetInt("compWarn",2)==2)
+        {
+            PlayerPrefs.SetInt("compWarn",0);    
+        }
+        compWarn = PlayerPrefs.GetInt("compWarn",2);
+        
         timer = TimeMaster.instance.CheckDate () [1];
         timerSetUpMin = 0;
         timerTemp = 0;
         timer -= TimeMaster.instance.CheckDate () [0];
         tempseg = 0;
         instance = this;
-        //this.enabled = false;
-        //print (timer);
-        //print (TimeMaster.instance.CheckDate () [0]);
-        //print (TimeMaster.instance.CheckDate () [1]);
     }
     void Update () {
         if (timer > 0) {
             timer -= Time.deltaTime;
             timerLabel.text = Formatting();
+            PlayerPrefs.SetInt("compWarn",1);
         }
         else
-            timerLabel.text="00:00:00";
+        {
+            timerLabel.text = "00:00:00";
+            if (PlayerPrefs.GetInt("compWarn",2)==1)
+            {
+                Reward();
+                PlayerPrefs.SetInt("compWarn",0);
+            }
+        }
+            
 
     }
-
+    void Reward()
+    {
+        int rd= UnityEngine.Random.Range(1, 3);
+        rewardPanel.SetActive(true);
+        if (rd==1)
+        {
+            suc1.SetActive(true);
+            suc2.SetActive(false);
+            suc3.SetActive(false);
+            inv.increaseItem("SUC"+rd+".1");
+        }
+        if (rd == 2)
+        {
+            suc1.SetActive(false);
+            suc2.SetActive(true);
+            suc3.SetActive(false);
+            inv.increaseItem("SUC" + rd + ".1");
+        }
+        if (rd == 3)
+        {
+            suc1.SetActive(false);
+            suc2.SetActive(false);
+            suc3.SetActive(true);
+            inv.increaseItem("SUC" + rd + ".1");
+        }
+    }
     public void ResetClock () {
         TimeMaster.instance.SaveDate ();
         timer = timerSetUpMin * 60;
@@ -43,24 +85,10 @@ public class RealTimeCounter : MonoBehaviour {
     }
     public void Reinitialize () {
 
-        //this.enabled = true;
+       // Debug.Log(PlayerPrefs.GetString("compWarn","Hola que hace"));
 
         this.ResetClock ();
     }
-    /*public string Formatting () {
-        if (!timer.ToString ("0").Equals (timerTemp.ToString ("0"))) {
-            timerTemp = timer;
-            tempseg -= 1;
-            if (tempseg < 0) {
-                timerSetUpMin -= 1;
-                tempseg = 59;
-            }
-
-            return timerSetUpMin.ToString ("0") + ':' + tempseg.ToString ("0");
-        } else
-            return timerSetUpMin.ToString ("0") + ':' + tempseg.ToString ("0");
-
-    }*/
     public void AumentCounter () {
         timerSetUpMin += 1;
         textTimer.text = timerSetUpMin.ToString ("0");

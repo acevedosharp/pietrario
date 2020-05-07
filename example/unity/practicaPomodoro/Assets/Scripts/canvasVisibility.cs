@@ -6,13 +6,16 @@ public class canvasVisibility : MonoBehaviour
 {
     public GameObject menu;
     public GameObject inventory;
+    public GameObject rewardPanel;
     
    private bool isShowing=true;
    private bool inventoryIsShowing = true;
+    private bool isShowingReward = true;
     void Start()
     {
         func();
         inventoryfunc();
+        RewardPanel();
     }
 
     public void func()
@@ -25,5 +28,10 @@ public class canvasVisibility : MonoBehaviour
     {
         inventoryIsShowing = !inventoryIsShowing;
         inventory.SetActive(inventoryIsShowing);
+    }
+    public void RewardPanel()
+    {
+        
+        rewardPanel.SetActive(false);
     }
 }
