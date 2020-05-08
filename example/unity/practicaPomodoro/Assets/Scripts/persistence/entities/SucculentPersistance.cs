@@ -17,10 +17,6 @@ public class SucculentPersistance : MonoBehaviour
     [SerializeField] GameObject buttonSucculentCopy3;
     
     
-    [SerializeField] GameObject buttonTools1;
-    [SerializeField] GameObject buttonTools2;
-    [SerializeField] GameObject buttonTools3;
-    
     
     [SerializeField] Image live1;
     [SerializeField] Image live2;
@@ -38,7 +34,10 @@ public class SucculentPersistance : MonoBehaviour
     [SerializeField] Image succulentLive3;
     [SerializeField] public Image sunLevel;
     float maxLive1 = 100, maxLive2 = 100, maxLive3 = 100, maxLight=100;
-    [SerializeField] public Button waterButton1;
+
+    [SerializeField] public Image can1;
+    [SerializeField] public Image can2;
+    [SerializeField] public Image can3;
     
     private Pietrario pietrario;
     private GameObject succ1, succ2, succ3;
@@ -48,10 +47,6 @@ public class SucculentPersistance : MonoBehaviour
     {
         pietrario = (Pietrario)PietrarioRepository.LoadPietrarios()[0];
         renderSucculent();
-
-        buttonTools1.SetActive(false);
-        buttonTools2.SetActive(false);
-        buttonTools3.SetActive(false);
     }
 
     private void Update()
@@ -189,6 +184,9 @@ public class SucculentPersistance : MonoBehaviour
         mask3.enabled = false;
         suc3.enabled = false;
         succulentLive3.enabled = false;
+        can1.enabled = false;
+        can2.enabled = false;
+        can3.enabled=false;
 
 
         if (pietrario.s1 != null)
@@ -217,6 +215,7 @@ public class SucculentPersistance : MonoBehaviour
             mask1.enabled = true;
             suc1.enabled = true;
             succulentLive1.enabled = true;
+            can1.enabled=true;
         }
         else
         {
@@ -248,6 +247,7 @@ public class SucculentPersistance : MonoBehaviour
             mask2.enabled = true;
             suc2.enabled = true;
             succulentLive2.enabled = true;
+            can2.enabled=true;
         }
         else
         {
@@ -280,6 +280,7 @@ public class SucculentPersistance : MonoBehaviour
             mask3.enabled = true;
             suc3.enabled = true;
             succulentLive3.enabled = true;
+            can3.enabled=true;
         }
         else
         {
@@ -320,7 +321,6 @@ public class SucculentPersistance : MonoBehaviour
         pietrario.Save();
         this.renderSucculent();
         
-        buttonTools1.SetActive(true);
     }
     public void enableSucculent2(int i)
     {
@@ -358,7 +358,6 @@ public class SucculentPersistance : MonoBehaviour
         pietrario.dtS2= DateTime.Now.Ticks; 
         pietrario.Save();
         this.renderSucculent();
-        buttonTools2.SetActive(true);
     }
     public void enableSucculent3(int i)
     {
@@ -390,7 +389,6 @@ public class SucculentPersistance : MonoBehaviour
         pietrario.dtS3 = DateTime.Now.Ticks;
         pietrario.Save();
         this.renderSucculent();
-        buttonTools3.SetActive(true);
     }
     public void updateWaterLevel(String suctype)
     {

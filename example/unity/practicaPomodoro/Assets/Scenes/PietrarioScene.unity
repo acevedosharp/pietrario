@@ -10635,9 +10635,6 @@ MonoBehaviour:
   buttonSucculentCopy1: {fileID: 588597970}
   buttonSucculentCopy2: {fileID: 2100027096}
   buttonSucculentCopy3: {fileID: 836478871}
-  buttonTools1: {fileID: 1637676164}
-  buttonTools2: {fileID: 1685229148}
-  buttonTools3: {fileID: 561653215}
   live1: {fileID: 528954809}
   live2: {fileID: 1882935278}
   live3: {fileID: 277911954}
@@ -10653,7 +10650,9 @@ MonoBehaviour:
   succulentLive2: {fileID: 1610241485}
   succulentLive3: {fileID: 2095257029}
   sunLevel: {fileID: 923684892}
-  waterButton1: {fileID: 1637676166}
+  can1: {fileID: 1637676167}
+  can2: {fileID: 1685229151}
+  can3: {fileID: 561653218}
 --- !u!114 &2139670580
 MonoBehaviour:
   m_ObjectHideFlags: 0
