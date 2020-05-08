@@ -87,9 +87,19 @@ public class SucculentPersistance : MonoBehaviour
             sunLevel.fillAmount = pietrario.sunLightLevel / maxLight;
             sunLabel.text = pietrario.sunLightLevel.ToString();
             pietrario.dtL = DateTime.Now.Ticks;
-            pietrario.Save();
             
 
+
+
+        }
+        else
+        {
+            if (pietrario.sunLightLevel<=0)
+            {
+                pietrario.sunLightLevel = 0;
+                pietrario.Save();  
+            }
+            
         }
     }
     public void updateS1wl()

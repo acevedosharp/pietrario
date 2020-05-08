@@ -19,6 +19,11 @@ public class LightEstimator : MonoBehaviour
         pietrario = (Pietrario)PietrarioRepository.LoadPietrarios()[0];
         PlayerPrefs.SetString("last_accumulator_timestamp", "0");
         //PlayerPrefs.SetInt("current_light_accumulator_value", 0);
+        if (pietrario.sunLightLevel<0)
+        {
+            pietrario.sunLightLevel = 0;
+            pietrario.Save();
+        }
     }
 
     private void OnEnable()
