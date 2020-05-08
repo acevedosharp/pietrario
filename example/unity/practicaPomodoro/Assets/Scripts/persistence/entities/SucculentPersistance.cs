@@ -31,11 +31,15 @@ public class SucculentPersistance : MonoBehaviour
     [SerializeField] Text suc1;
     [SerializeField] Text suc2;
     [SerializeField] Text suc3;
+    [SerializeField] Text sunLabel;
     [SerializeField] GameObject princiPietrario;
     [SerializeField] Image succulentLive1;
     [SerializeField] Image succulentLive2;
     [SerializeField] Image succulentLive3;
-    float maxLive1 = 100, maxLive2 = 100, maxLive3 = 100;
+    [SerializeField] public Image sunLevel;
+    float maxLive1 = 100, maxLive2 = 100, maxLive3 = 100, maxLight=100;
+    [SerializeField] public Button waterButton1;
+    
     private Pietrario pietrario;
     private GameObject succ1, succ2, succ3;
 
@@ -43,7 +47,6 @@ public class SucculentPersistance : MonoBehaviour
     void Start()
     {
         pietrario = (Pietrario)PietrarioRepository.LoadPietrarios()[0];
-
         renderSucculent();
 
         buttonTools1.SetActive(false);
@@ -53,23 +56,47 @@ public class SucculentPersistance : MonoBehaviour
 
     private void Update()
     {
-        if (pietrario.s1 != null)
+        if (pietrario!=null)
         {
-            updateS1wl();
-        }
-        if (pietrario.s2 != null)
-        {
-            updateS2wl();
-        }
-        if (pietrario.s3 != null)
-        {
-            updateS3wl();
+            if (pietrario.s1 != null)
+            {
+                updateS1wl();
+            }
+            if (pietrario.s2 != null)
+            {
+                updateS2wl();
+            }
+            if (pietrario.s3 != null)
+            {
+                updateS3wl();
 
+            }
+            updateSunLight();
+            
         }
+        
+
+        
 
 
     }
 
+    public void updateSunLight()
+    {
+        long timeDelta = DateTime.Now.Ticks - pietrario.dtL;
+        TimeSpan timePassed = new TimeSpan(timeDelta);
+        //Debug.Log(pietrario.decaySunLightLevel);
+        if (Math.Floor(timePassed.TotalSeconds) > 0 && pietrario.sunLightLevel > 0)
+        {
+            pietrario.sunLightLevel -= pietrario.decaySunLightLevel * Convert.ToSingle(Math.Floor(timePassed.TotalSeconds));
+            sunLevel.fillAmount = pietrario.sunLightLevel / maxLight;
+            sunLabel.text = pietrario.sunLightLevel.ToString();
+            pietrario.dtL = DateTime.Now.Ticks;
+            pietrario.Save();
+            
+
+        }
+    }
     public void updateS1wl()
     {
         long timeDelta = DateTime.Now.Ticks - pietrario.dtS1;
@@ -365,23 +392,23 @@ public class SucculentPersistance : MonoBehaviour
         this.renderSucculent();
         buttonTools3.SetActive(true);
     }
-
     public void updateWaterLevel(String suctype)
     {
       
         if (suctype == "SUC1")
         {
-            pietrario.s1wl = 100;
+            pietrario.s1wl = 100f;
             renderSucculent();
             pietrario.Save();
-        }else if (suctype == "SUC2")
+        }
+        else if (suctype == "SUC2")
         {
-            pietrario.s2wl = 100;
+            pietrario.s2wl = 100f;
             renderSucculent();
             pietrario.Save();
         }else if (suctype == "SUC3")
         {
-            pietrario.s3wl = 100;
+            pietrario.s3wl = 100f;
             renderSucculent();
             pietrario.Save();
         }

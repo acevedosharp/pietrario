@@ -87,13 +87,10 @@ public class InventoryController : MonoBehaviour
 
     }
 
-    public void waterSucculent(String suctype)
+   public void waterSucculent(String suctype)
     {
         int wat_q = Inventory.getCantidadByReferencedItem("AGUA");
         Inventory.updateCantidadByReferencedItem("AGUA",(wat_q-1));
-        
-        SucculentPersistance succulentPersistance= new SucculentPersistance();
-        succulentPersistance.updateWaterLevel(suctype);
     }
 
 

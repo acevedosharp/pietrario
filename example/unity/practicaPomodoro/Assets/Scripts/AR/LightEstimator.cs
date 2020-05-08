@@ -12,11 +12,13 @@ public class LightEstimator : MonoBehaviour
     [SerializeField] private Image sunIconIndicator;
 
     private int frameCounter = 1;
+    Pietrario pietrario;
 
     private void Start()
     {
+        pietrario = (Pietrario)PietrarioRepository.LoadPietrarios()[0];
         PlayerPrefs.SetString("last_accumulator_timestamp", "0");
-        PlayerPrefs.SetInt("current_light_accumulator_value", 0);
+        //PlayerPrefs.SetInt("current_light_accumulator_value", 0);
     }
 
     private void OnEnable()
@@ -35,7 +37,7 @@ public class LightEstimator : MonoBehaviour
         if (frameCounter % 60 == 0 && args.lightEstimation.averageBrightness.HasValue)
         {
             float lightValue = args.lightEstimation.averageBrightness.Value;
-            accumulatorPreview.text = PlayerPrefs.GetInt("current_light_accumulator_value") + " Lux";
+            accumulatorPreview.text = pietrario.sunLightLevel + " Lux";
 
             attemptUpdateAccumulator(lightValue);
         }
@@ -51,10 +53,10 @@ public class LightEstimator : MonoBehaviour
             if (lightValue > 0.3)
             {
                 PlayerPrefs.SetString("last_accumulator_timestamp", DateTime.Now.Ticks.ToString());
-                int currentAccValue = PlayerPrefs.GetInt("current_light_accumulator_value");
+                float currentAccValue = pietrario.sunLightLevel;
                 if (currentAccValue < 100)
-                    PlayerPrefs.SetInt("current_light_accumulator_value", currentAccValue + 1);
-                
+                    pietrario.sunLightLevel += 1;
+                pietrario.Save();
                 sunIconIndicator.color = Color.white;
             }
             else

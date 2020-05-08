@@ -13,10 +13,12 @@ using UnityEngine;
     public float humidityLevel;
     public Succulent s1, s2, s3;
     public float s1wl, s2wl, s3wl; // Water level
-    public float sunLightLevel; // Sunlight level
     public long dtS1, dtS2, dtS3; //last Change in each Succulent
+    public float sunLightLevel; // Sunlight level
+    public float decaySunLightLevel;
+    public long dtL; //Last change in sunLight
 
-    public Pietrario(int id, string name, long creationDate, float humidityLevel, Succulent s1, Succulent s2, Succulent s3, float s1Wl, float s2Wl, float s3Wl, float sunLightLevel, long dtS1, long dtS2, long dtS3 )
+    public Pietrario(int id, string name, long creationDate, float humidityLevel, Succulent s1, Succulent s2, Succulent s3, float s1Wl, float s2Wl, float s3Wl,  long dtS1, long dtS2, long dtS3,long dtL, float sunLightLevel, float decaySunLightLevel)
     {
         this.id = id;
         this.name = name;
@@ -32,6 +34,9 @@ using UnityEngine;
         this.dtS2 = dtS2;
         this.dtS3 = dtS3;
         this.sunLightLevel = sunLightLevel;
+        this.dtL = dtL;
+        this.decaySunLightLevel = decaySunLightLevel;
+
 
         if (s1 != null)
         {
@@ -61,9 +66,9 @@ using UnityEngine;
         PlayerPrefs.SetString("last_timestamp_piet_" + id, lastTimestamp.ToString()); // long value stored as string!!
         PlayerPrefs.SetFloat("humidity_level_piet_" + id, humidityLevel);
         PlayerPrefs.SetFloat("sunLightLevel "+id,sunLightLevel);
-        
-        
-        
+        PlayerPrefs.SetFloat("decaySunLightLevel " + id,decaySunLightLevel);
+        PlayerPrefs.SetString("dtL"+id, dtL.ToString());
+
         if (s1 == null)
         {
             PlayerPrefs.SetString("id_suc_1_piet_" + id, "null");

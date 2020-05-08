@@ -11,7 +11,7 @@ public class PietrarioRepository
 
         pietrario.id = assignId();
         pietrario.Save();
-        Debug.Log("Pietrario "+ pietrario.ToString());
+        //Debug.Log("Pietrario "+ pietrario.ToString());
         LoadPietrarios();
     }
 
@@ -26,7 +26,7 @@ public class PietrarioRepository
 
     public static ArrayList LoadPietrarios()
     {
-        Debug.Log("Executed LoadPietrarios()");
+        //Debug.Log("Executed LoadPietrarios()");
 
         ArrayList result = new ArrayList();
 
@@ -62,12 +62,14 @@ public class PietrarioRepository
                 PlayerPrefs.GetFloat("s1wl_piet_" + 1),
                 PlayerPrefs.GetFloat("s2wl_piet_" + 1),
                 PlayerPrefs.GetFloat("s3wl_piet_" + 1),
-                PlayerPrefs.GetFloat("sunLightLevel "+1),
+                
                 long.Parse(PlayerPrefs.GetString("dtS1 "+1)),
                 long.Parse(PlayerPrefs.GetString("dtS2 "+1)),
-                long.Parse(PlayerPrefs.GetString("dtS3 "+1))
+                long.Parse(PlayerPrefs.GetString("dtS3 "+1)),
+                long.Parse(PlayerPrefs.GetString("dtL"+1)),
+                PlayerPrefs.GetFloat("sunLightLevel " + 1),
+                PlayerPrefs.GetFloat("decaySunLightLevel " + 1)
             );
-
             result.Add(p);
 
             idCounter++;
