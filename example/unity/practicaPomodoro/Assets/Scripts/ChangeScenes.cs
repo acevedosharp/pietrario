@@ -5,18 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScenes : MonoBehaviour
 {
-    
+    public Animator transition;
+
     public void ChangeSceneStart()
     {
         SceneManager.LoadScene(0);
     }
-    
-    
+
+
     public void ChangeSceneNewPietrario()
     {
         SceneManager.LoadScene(1);
     }
-    
+
     public void ChangeScenePietrarioList()
     {
         SceneManager.LoadScene(2);
@@ -24,13 +25,25 @@ public class ChangeScenes : MonoBehaviour
 
     public void ChangeScenePomodoro()
     {
-        SceneManager.LoadScene(3);
+        ChangeSceneWithTransition(3);
     }
 
-   public void ChangeSceneAR()
-       {
-           SceneManager.LoadScene(4);
-       }
+    public void ChangeSceneAR()
+    {
+        ChangeSceneWithTransition(4);
+    }
 
-  
+    private void ChangeSceneWithTransition(int sceneIndex)
+    {
+        StartCoroutine(LoadNewSceneCoroutine(sceneIndex));
+    }
+
+    IEnumerator LoadNewSceneCoroutine(int sceneIndex)
+    {
+        transition.SetTrigger("OnChangeSceneRequested");
+
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(sceneIndex);
+    }
 }
