@@ -9,18 +9,18 @@ public class ChangeScenes : MonoBehaviour
 
     public void ChangeSceneStart()
     {
-        SceneManager.LoadScene(0);
+        ChangeSceneWithTransition(0);
     }
 
 
     public void ChangeSceneNewPietrario()
     {
-        SceneManager.LoadScene(1);
+        ChangeSceneWithTransition(1);
     }
 
     public void ChangeScenePietrarioList()
     {
-        SceneManager.LoadScene(2);
+        ChangeSceneWithTransition(2);
     }
 
     public void ChangeScenePomodoro()
