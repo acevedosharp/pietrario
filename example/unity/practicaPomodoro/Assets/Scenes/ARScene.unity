@@ -443,6 +443,7 @@ GameObject:
   - component: {fileID: 717369235}
   - component: {fileID: 717369234}
   - component: {fileID: 717369237}
+  - component: {fileID: 717369238}
   m_Layer: 0
   m_Name: AR Session
   m_TagString: Untagged
@@ -502,6 +503,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29aa7685474f39d498b50d1c22eef3ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &717369238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717369233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439425f0cb65904fb7831906310e9d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pietrario: {fileID: 247409654700670440, guid: 139f1f2aec59f514394037b44b29073c,
+    type: 3}
 --- !u!1 &728171203
 GameObject:
   m_ObjectHideFlags: 0

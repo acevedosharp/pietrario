@@ -231,11 +231,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 250, y: -520}
+  m_AnchoredPosition: {x: 250, y: -700}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &34622986
@@ -280,29 +280,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 34622987}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2139670581}
-        m_MethodName: waterSucculent
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: SUC1
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2139670579}
-        m_MethodName: updateWaterLevel
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: SUC1
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &34622987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,6 +521,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: SUC1.1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2139670589}
+        m_MethodName: ShowButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &38840829
@@ -832,6 +821,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: SUC2.1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2139670588}
+        m_MethodName: ShowButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &65150358
@@ -1529,6 +1529,17 @@ MonoBehaviour:
           m_StringArgument: SUC2.1
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2139670589}
+        m_MethodName: ShowButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &212295925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1943,12 +1954,12 @@ RectTransform:
   m_Children:
   - {fileID: 2095257031}
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 260, y: 400}
-  m_SizeDelta: {x: 142.23927, y: 146.73312}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 250, y: -350}
+  m_SizeDelta: {x: 142.23927, y: 146.73315}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &277911953
 CanvasRenderer:
@@ -2016,7 +2027,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -3090,12 +3101,12 @@ RectTransform:
   m_Children:
   - {fileID: 2056756911}
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -285, y: 399.99994}
-  m_SizeDelta: {x: 142.23927, y: 146.73312}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -285, y: -350}
+  m_SizeDelta: {x: 142.23927, y: 146.73315}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &528954809
 MonoBehaviour:
@@ -3241,11 +3252,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 250, y: -520}
+  m_AnchoredPosition: {x: 250, y: -700}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &561653217
@@ -3311,6 +3322,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: SUC3
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2139670588}
+        m_MethodName: UpdateButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &561653218
@@ -3453,7 +3475,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3673,6 +3695,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: SUC3.1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2139670587}
+        m_MethodName: ShowButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &609968905
@@ -4094,7 +4127,7 @@ RectTransform:
   - {fileID: 1986985903}
   - {fileID: 1078896036}
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4322,7 +4355,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4633,7 +4666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5565672, g: 0.09344961, b: 0.7924528, a: 1}
+  m_Color: {r: 0.7921569, g: 0.10517935, b: 0.09411762, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4783,6 +4816,79 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928572641}
+  m_CullTransparentMesh: 0
+--- !u!1 &959567904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 959567905}
+  - component: {fileID: 959567907}
+  - component: {fileID: 959567906}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &959567905
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959567904}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1895}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2139670578}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &959567906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959567904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.3726415, g: 0.75779617, b: 1, a: 0.5254902}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &959567907
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959567904}
   m_CullTransparentMesh: 0
 --- !u!1 &962776745
 GameObject:
@@ -5597,6 +5703,17 @@ MonoBehaviour:
           m_StringArgument: SUC2.1
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2139670587}
+        m_MethodName: ShowButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1033097067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5664,11 +5781,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -10, y: -420}
+  m_AnchoredPosition: {x: -10, y: -600}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1035689428
@@ -5713,29 +5830,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1035689429}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2139670581}
-        m_MethodName: waterSucculent
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: SUC1
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2139670579}
-        m_MethodName: updateWaterLevel
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: SUC1
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1035689429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5888,7 +5983,7 @@ RectTransform:
   m_Children:
   - {fileID: 438604125}
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -6040,7 +6135,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1.87, y: 4.15}
+  m_AnchoredPosition: {x: -1.52, y: 3.7}
   m_SizeDelta: {x: 148.41357, y: 176.48224}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1059317492
@@ -6563,6 +6658,17 @@ MonoBehaviour:
           m_StringArgument: SUC3.1
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2139670589}
+        m_MethodName: ShowButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1137010024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6712,7 +6818,7 @@ RectTransform:
   - {fileID: 477352683}
   - {fileID: 229420271}
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6826,7 +6932,7 @@ RectTransform:
   - {fileID: 1336046433}
   - {fileID: 994022238}
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6956,7 +7062,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -7365,7 +7471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3764706, g: 0.74509805, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7411,7 +7517,7 @@ RectTransform:
   m_Children:
   - {fileID: 923684891}
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -7563,7 +7669,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.03, y: 4.75}
+  m_AnchoredPosition: {x: 0.17, y: 4.45}
   m_SizeDelta: {x: 148.41357, y: 176.48224}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1343453240
@@ -7657,11 +7763,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -285, y: -520}
+  m_AnchoredPosition: {x: -285, y: -700}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1411296390
@@ -7706,29 +7812,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1411296391}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2139670581}
-        m_MethodName: waterSucculent
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: SUC1
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2139670579}
-        m_MethodName: updateWaterLevel
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: SUC1
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1411296391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7877,6 +7961,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: SUC3.1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2139670588}
+        m_MethodName: ShowButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1421143088
@@ -8584,7 +8679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5565672, g: 0.09344961, b: 0.7924528, a: 1}
+  m_Color: {r: 0.050980393, g: 0.17254902, b: 0.6039216, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -8707,11 +8802,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -285, y: -520}
+  m_AnchoredPosition: {x: -285, y: -700}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1637676166
@@ -8777,6 +8872,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: SUC1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2139670587}
+        m_MethodName: UpdateButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1637676167
@@ -8866,7 +8972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3726415, g: 0.74414426, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -8921,7 +9027,7 @@ RectTransform:
   - {fileID: 1915610561}
   - {fileID: 56209101}
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -0.78700006, y: 1.9460001, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -9140,7 +9246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3764706, g: 0.74509805, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -9186,11 +9292,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -10, y: -420}
+  m_AnchoredPosition: {x: -10, y: -600}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1685229150
@@ -9256,6 +9362,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: SUC2
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2139670589}
+        m_MethodName: UpdateButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1685229151
@@ -9743,12 +9860,12 @@ RectTransform:
   m_Children:
   - {fileID: 1610241483}
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: 487.74}
-  m_SizeDelta: {x: 142.23927, y: 146.73312}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -220}
+  m_SizeDelta: {x: 142.23927, y: 146.73315}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1882935277
 CanvasRenderer:
@@ -9975,6 +10092,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: SUC1.1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2139670588}
+        m_MethodName: ShowButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1904868404
@@ -10269,7 +10397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.6119033, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -10405,7 +10533,7 @@ RectTransform:
   - {fileID: 1674616243}
   - {fileID: 463242859}
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10841,6 +10969,17 @@ MonoBehaviour:
           m_StringArgument: SUC1.1
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2139670587}
+        m_MethodName: ShowButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2043432753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10912,7 +11051,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: -10}
+  m_AnchoredPosition: {x: 0, y: -10}
   m_SizeDelta: {x: 151.01624, y: 152.1972}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2043701356
@@ -11056,7 +11195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5565672, g: 0.09344961, b: 0.7924528, a: 1}
+  m_Color: {r: 0.048415814, g: 0.17015375, b: 0.6037736, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -11203,7 +11342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5565672, g: 0.09344961, b: 0.7924528, a: 1}
+  m_Color: {r: 0.050980393, g: 0.17254902, b: 0.6039216, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -11277,11 +11416,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2139670578}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20, y: 370}
+  m_AnchoredPosition: {x: 0, y: 370}
   m_SizeDelta: {x: 161.27856, y: 181.58632}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2100027098
@@ -11486,6 +11625,8 @@ GameObject:
   - component: {fileID: 2139670585}
   - component: {fileID: 2139670584}
   - component: {fileID: 2139670587}
+  - component: {fileID: 2139670589}
+  - component: {fileID: 2139670588}
   m_Layer: 5
   m_Name: CanvasPrincipal
   m_TagString: Untagged
@@ -11616,6 +11757,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 959567905}
   - {fileID: 1662588560}
   - {fileID: 1290931782}
   - {fileID: 1049316854}
@@ -11822,9 +11964,45 @@ MonoBehaviour:
   tool1: {fileID: 1637676164}
   tool2: {fileID: 1685229148}
   tool3: {fileID: 561653215}
+  notool3: {fileID: 34622984}
+  notool2: {fileID: 1035689426}
+  notool1: {fileID: 1411296388}
+--- !u!114 &2139670588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139670571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a576123ea72524ebb6745e008e08b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tool2: {fileID: 1685229148}
+  tool1: {fileID: 1637676164}
+  tool3: {fileID: 561653215}
   notool1: {fileID: 1411296388}
   notool2: {fileID: 1035689426}
   notool3: {fileID: 34622984}
+--- !u!114 &2139670589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139670571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0f785a561e602f41b180402d7b44b3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tool2: {fileID: 1685229148}
+  tool1: {fileID: 1637676164}
+  tool3: {fileID: 561653215}
+  notool1: {fileID: 1411296388}
+  notool3: {fileID: 34622984}
+  notool2: {fileID: 1035689426}
 --- !u!23 &29406905954783520
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14367,7 +14545,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 2.13, y: 4.16}
+  m_AnchoredPosition: {x: 1.77, y: 3.7}
   m_SizeDelta: {x: 148.41357, y: 176.48224}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8799583460727668930
@@ -14465,7 +14643,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: -10}
+  m_AnchoredPosition: {x: 0, y: -10}
   m_SizeDelta: {x: 151.01624, y: 152.1972}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8799583460872073436
