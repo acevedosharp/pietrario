@@ -66,7 +66,12 @@ public class SucculentPersistance : MonoBehaviour
                 updateS3wl();
 
             }
-            updateSunLight();
+
+            if (pietrario.sunLightLevel>0)
+            {
+                updateSunLight();
+            }
+            
             
         }
         
@@ -80,8 +85,8 @@ public class SucculentPersistance : MonoBehaviour
     {
         long timeDelta = DateTime.Now.Ticks - pietrario.dtL;
         TimeSpan timePassed = new TimeSpan(timeDelta);
-        //Debug.Log(pietrario.decaySunLightLevel);
-        if (Math.Floor(timePassed.TotalSeconds) > 0 && pietrario.sunLightLevel > 0)
+        
+        if (Math.Floor(timePassed.TotalSeconds) > 0)
         {
             pietrario.sunLightLevel -= pietrario.decaySunLightLevel * Convert.ToSingle(Math.Floor(timePassed.TotalSeconds));
             sunLevel.fillAmount = pietrario.sunLightLevel / maxLight;
