@@ -74,9 +74,6 @@
      <Compile Include="Assets\Scripts\UpdateSucButton.cs" />
      <Compile Include="Assets\Scripts\UpdateSucButton2.cs" />
      <Compile Include="Assets\Scripts\UpdateSucButton3.cs" />
-     <Compile Include="Assets\Scripts\UpdateToolButtons.cs" />
-     <Compile Include="Assets\Scripts\UpdateToolButtons2.cs" />
-     <Compile Include="Assets\Scripts\UpdateToolButtons3.cs" />
      <Compile Include="Assets\Scripts\animator\LevelLoader.cs" />
      <Compile Include="Assets\Scripts\canvasVisibility.cs" />
      <Compile Include="Assets\Scripts\persistence\entities\Guardian.cs" />
@@ -92,6 +89,8 @@
      <Compile Include="Assets\Scripts\view_controller\NewPietrarioController.cs" />
      <None Include="Assets\Prefabs\Modelado\Guardianes\rattlesnake\BLENDSWAP_LICENSE.txt" />
      <None Include="Assets\Prefabs\Modelado\Guardianes\african-elephant\BLENDSWAP_LICENSE.txt" />
+     <None Include="Assets\Prefabs\PietrarioModelo\Blender\c30lumexfif4-eb_house_plant_01\eb_house_plant_01\READ_ME.txt" />
+     <None Include="Assets\Prefabs\PietrarioModelo\Blender\MY_REALISTIC_GRASS_ASSISSTANCE\MY REALISTIC GRASS ASSISSTANCE\HOW TO USE_PLEASE READ.txt" />
      <None Include="Assets\Prefabs\Modelado\Rocas\BLENDSWAP_LICENSE.txt" />
  <Reference Include="Unity.XR.Management">
  <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
