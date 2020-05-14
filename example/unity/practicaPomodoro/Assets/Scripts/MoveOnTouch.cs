@@ -10,7 +10,6 @@ public class MoveOnTouch : MonoBehaviour {
     void Start () {
         controller = 0.3f;
         pr=transform.rotation;
-
     }
 
     // Update is called once per frame
@@ -21,12 +20,8 @@ public class MoveOnTouch : MonoBehaviour {
             //print (click);
             if (click.phase == TouchPhase.Moved)
             {
-                
                 transform.Rotate(new Vector3(-click.deltaPosition.y*controller,-click.deltaPosition.x*controller,0));
-
-
             }
-
         }
         else
         {
@@ -34,8 +29,6 @@ public class MoveOnTouch : MonoBehaviour {
             {
                 transform.rotation=Quaternion.Lerp(transform.rotation,pr,Time.time*0.01f);
             }
-            
         }
-        
     }
 }

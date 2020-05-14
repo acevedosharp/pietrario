@@ -110,6 +110,21 @@ using UnityEngine;
         }
     }
 
+    public void setLightLevel(float newValue)
+    {
+        newValue = Math.Min(100, newValue);
+        sunLightLevel = newValue;
+        PlayerPrefs.SetFloat("sunLightLevel "+id,newValue);
+        
+        dtL = DateTime.Now.Ticks;
+        PlayerPrefs.SetString("dtL"+id, dtL.ToString());
+    }
+
+    public float getRealLightLevel()
+    {
+        return (float) Math.Round(PlayerPrefs.GetFloat("sunLightLevel "+id),1);
+    }
+
     public override string ToString()
     {
         return id +", "+ name +", "+ creationDate +", "+ humidityLevel +", "+ s1wl+", "+ s2wl+", "+ s3wl+", "+ sunLightLevel+", "+ dtS1+", "+ dtS2+", "+ dtS3;

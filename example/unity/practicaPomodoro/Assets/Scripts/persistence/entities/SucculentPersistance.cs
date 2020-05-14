@@ -16,8 +16,6 @@ public class SucculentPersistance : MonoBehaviour
     [SerializeField] GameObject buttonSucculentCopy2;
     [SerializeField] GameObject buttonSucculentCopy3;
     
-    
-    
     [SerializeField] Image live1;
     [SerializeField] Image live2;
     [SerializeField] Image live3;
@@ -75,14 +73,7 @@ public class SucculentPersistance : MonoBehaviour
             {
                 updateSunLight();
             }
-            
-            
         }
-        
-
-        
-
-
     }
 
     public void updateSunLight()
@@ -90,23 +81,18 @@ public class SucculentPersistance : MonoBehaviour
         long timeDelta = DateTime.Now.Ticks - pietrario.dtL;
         TimeSpan timePassed = new TimeSpan(timeDelta);
         
+        float sunlightSnapshot = pietrario.getRealLightLevel();
         if (Math.Floor(timePassed.TotalSeconds) > 0)
         {
-            pietrario.sunLightLevel -= pietrario.decaySunLightLevel * Convert.ToSingle(Math.Floor(timePassed.TotalSeconds));
-            sunLevel.fillAmount = pietrario.sunLightLevel / maxLight;
-            sunLabel.text = pietrario.sunLightLevel.ToString();
-            pietrario.dtL = DateTime.Now.Ticks;
-            
-
-
-
+            pietrario.setLightLevel(sunlightSnapshot - pietrario.decaySunLightLevel * Convert.ToSingle(Math.Floor(timePassed.TotalSeconds)));
+            sunLevel.fillAmount = sunlightSnapshot / maxLight;
+            sunLabel.text = sunlightSnapshot.ToString();
         }
         else
         {
-            if (pietrario.sunLightLevel<=0)
+            if (sunlightSnapshot<0)
             {
-                pietrario.sunLightLevel = 0;
-                pietrario.Save();  
+                pietrario.setLightLevel(0);
             }
             
         }

@@ -19,7 +19,7 @@ public class LightEstimator : MonoBehaviour
         pietrario = (Pietrario)PietrarioRepository.LoadPietrarios()[0];
         PlayerPrefs.SetString("last_accumulator_timestamp", "0");
         //PlayerPrefs.SetInt("current_light_accumulator_value", 0);
-        if (pietrario.sunLightLevel<0)
+        if (pietrario.sunLightLevel < 0)
         {
             pietrario.sunLightLevel = 0;
             pietrario.Save();
@@ -39,11 +39,10 @@ public class LightEstimator : MonoBehaviour
     private void FrameUpdated(ARCameraFrameEventArgs args)
     {
         // Cada 60 frames
-        if (frameCounter % 60 == 0 && args.lightEstimation.averageBrightness.HasValue)
+        if (frameCounter % 30 == 0 && args.lightEstimation.averageBrightness.HasValue)
         {
             float lightValue = args.lightEstimation.averageBrightness.Value;
-            accumulatorPreview.text = pietrario.sunLightLevel + " Lux";
-
+            accumulatorPreview.text = pietrario.getRealLightLevel() + " Lux";
             attemptUpdateAccumulator(lightValue);
         }
 
@@ -53,15 +52,14 @@ public class LightEstimator : MonoBehaviour
     private void attemptUpdateAccumulator(float lightValue)
     {
         // Si ha pasado por lo menos 1s desde la última actualización, se actualizará.
-        if (DateTime.Now.Ticks - long.Parse(PlayerPrefs.GetString("last_accumulator_timestamp")) > 1000)
+        if (DateTime.Now.Ticks - long.Parse(PlayerPrefs.GetString("last_accumulator_timestamp")) > 500)
         {
             if (lightValue > 0.3)
             {
                 PlayerPrefs.SetString("last_accumulator_timestamp", DateTime.Now.Ticks.ToString());
-                float currentAccValue = pietrario.sunLightLevel;
-                if (currentAccValue < 100)
-                    pietrario.sunLightLevel += 1;
-                pietrario.Save();
+                float valueSnapshot = pietrario.getRealLightLevel();
+                if (valueSnapshot < 100)
+                    pietrario.setLightLevel(valueSnapshot+1);
                 sunIconIndicator.color = Color.white;
             }
             else

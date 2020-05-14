@@ -429,7 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _arCameraManager: {fileID: 135065407}
-  accumulatorPreview: {fileID: 0}
+  accumulatorPreview: {fileID: 2002094008}
   sunIconIndicator: {fileID: 1661941477}
 --- !u!1 &717369233
 GameObject:

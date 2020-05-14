@@ -18,10 +18,10 @@ public class InventoryController : MonoBehaviour
     public void createInventory()
     {
       
-        //Aqui me imagino que iran las modificaciones cuando apliquen la logica de ustedes
+        //Aquí me imagino que irán las modificaciones cuando apliquen la lógica de ustedes
         
         
-        //Normalmente el usuario deberia iniciar con una suculenta, de tipo 1, pero para pruebas mas adelante, se crearán
+        //Normalmente el usuario debería iniciar con una suculenta, de tipo 1, pero para pruebas más adelante, se crearán
         // 3 entidades de cada item
         Inventory.updateCantidadByReferencedItem("SUC1",2);
         Inventory.updateCantidadByReferencedItem("SUC2",2);
