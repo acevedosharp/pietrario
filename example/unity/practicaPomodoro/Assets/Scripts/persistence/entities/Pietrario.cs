@@ -17,8 +17,9 @@ using UnityEngine;
     public float sunLightLevel; // Sunlight level
     public float decaySunLightLevel;
     public long dtL; //Last change in sunLight
+    public Guardian guardian;
 
-    public Pietrario(int id, string name, long creationDate, float humidityLevel, Succulent s1, Succulent s2, Succulent s3, float s1Wl, float s2Wl, float s3Wl,  long dtS1, long dtS2, long dtS3,long dtL, float sunLightLevel, float decaySunLightLevel)
+    public Pietrario(int id, string name, long creationDate, float humidityLevel, Succulent s1, Succulent s2, Succulent s3, float s1Wl, float s2Wl, float s3Wl,  long dtS1, long dtS2, long dtS3,long dtL, float sunLightLevel, float decaySunLightLevel, Guardian guardian)
     {
         this.id = id;
         this.name = name;
@@ -36,6 +37,7 @@ using UnityEngine;
         this.sunLightLevel = sunLightLevel;
         this.dtL = dtL;
         this.decaySunLightLevel = decaySunLightLevel;
+        this.guardian = guardian;
 
 
         if (s1 != null)
@@ -107,6 +109,15 @@ using UnityEngine;
             PlayerPrefs.SetString("id_suc_3_piet_" + id, s3.persistentId);
             PlayerPrefs.SetFloat("s3wl_piet_" + id, s3wl);
             PlayerPrefs.SetString("dtS3 "+id,dtS3.ToString());
+        }
+
+        if (guardian==null)
+        {
+            PlayerPrefs.SetString("idGuardian "+id,"null");
+        }
+        else
+        {
+            PlayerPrefs.SetString("idGuardian "+id,guardian.id);
         }
     }
 

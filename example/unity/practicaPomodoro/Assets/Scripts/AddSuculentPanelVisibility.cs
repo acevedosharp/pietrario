@@ -8,15 +8,17 @@ public class AddSuculentPanelVisibility : MonoBehaviour
     public GameObject panel1;
     public GameObject panel2;
     public GameObject panel3;
+    public GameObject panel4;
     private bool visible1 = true;
     private bool visible2 = true;
     private bool visible3 = true;
-
+    private bool visible4 = true;
     void Start()
     {
         Panel1();
         Panel2();
         Panel3();
+        Panel4();
         
     }
 
@@ -32,6 +34,10 @@ public class AddSuculentPanelVisibility : MonoBehaviour
         if (visible3)
         {
             Panel3();
+        }
+        if (visible4)
+        {
+            Panel4();
         }
     }
 
@@ -49,6 +55,10 @@ public class AddSuculentPanelVisibility : MonoBehaviour
         {
             Panel3();
         }
+        if (visible4)
+        {
+            Panel4();
+        }
     }
 
     public void Panel3()
@@ -64,13 +74,39 @@ public class AddSuculentPanelVisibility : MonoBehaviour
         {
             Panel2();
         }
+
+        if (visible4)
+        {
+            Panel4();
+        }
     }
+    public void Panel4()
+    {
+        visible4 = !visible4;
+        panel4.SetActive(visible4);
+        if (visible1)
+        {
+            Panel1();
+        }
+
+        if (visible2)
+        {
+            Panel2();
+        }
+
+        if (visible3)
+        {
+            Panel3();
+        }
+    }
+    
 
     public void CloseAll()
     {
         visible1 = true;
         visible2 = true;
         visible3 = true;
+        visible4 = true;
         Start();
     }
 

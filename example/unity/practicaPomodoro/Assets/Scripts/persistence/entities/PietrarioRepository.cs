@@ -37,6 +37,7 @@ public class PietrarioRepository
             Succulent s1Obj = null;
             Succulent s2Obj = null;
             Succulent s3Obj = null;
+            Guardian guardian = null;
 
             string s1Snapshot = PlayerPrefs.GetString("id_suc_1_piet_" + 1);
             if (!s1Snapshot.Equals("null"))
@@ -49,6 +50,11 @@ public class PietrarioRepository
             string s3Snapshot = PlayerPrefs.GetString("id_suc_3_piet_" + 1);
             if (!s3Snapshot.Equals("null"))
                 s3Obj = SucculentRepository.find(s3Snapshot);
+            string guardianSnapShot = PlayerPrefs.GetString("idGuardian "+1);
+            if (!guardianSnapShot.Equals("null"))
+            {
+                guardian = GuardianRepository.find(guardianSnapShot);
+            }
 
             // Create and add existing Pietrarios to memory.
             Pietrario p = new Pietrario(
@@ -68,7 +74,8 @@ public class PietrarioRepository
                 long.Parse(PlayerPrefs.GetString("dtS3 "+1)),
                 long.Parse(PlayerPrefs.GetString("dtL"+1)),
                 PlayerPrefs.GetFloat("sunLightLevel " + 1),
-                PlayerPrefs.GetFloat("decaySunLightLevel " + 1)
+                PlayerPrefs.GetFloat("decaySunLightLevel " + 1),
+                guardian
             );
             result.Add(p);
 

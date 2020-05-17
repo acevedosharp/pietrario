@@ -9,12 +9,14 @@ public class SucculentPersistance : MonoBehaviour
     [SerializeField] GameObject succulent1;
     [SerializeField] GameObject succulent2;
     [SerializeField] GameObject succulent3;
+    
     [SerializeField] GameObject buttonSucculent1;
     [SerializeField] GameObject buttonSucculent2;
     [SerializeField] GameObject buttonSucculent3;
     [SerializeField] GameObject buttonSucculentCopy1;
     [SerializeField] GameObject buttonSucculentCopy2;
     [SerializeField] GameObject buttonSucculentCopy3;
+    [SerializeField] GameObject buttonGuardian;
     
     [SerializeField] Image live1;
     [SerializeField] Image live2;
@@ -39,10 +41,16 @@ public class SucculentPersistance : MonoBehaviour
     [SerializeField] public GameObject noCan1;
     [SerializeField] public GameObject noCan2;
     [SerializeField] public GameObject noCan3;
-    
+    [SerializeField] public GameObject activator1;
+    [SerializeField] public GameObject activator2;
+    [SerializeField] public GameObject activator3;
+    [SerializeField] public GameObject guardian1;
+    [SerializeField] public GameObject guardian2;
+    [SerializeField] public GameObject guardian3;
     private Pietrario pietrario;
     private GameObject succ1, succ2, succ3;
-
+    private int conActivator1=4,conActivator2=4,conActivator3=4;
+    private GameObject guardian;
 
     void Start()
     {
@@ -74,6 +82,7 @@ public class SucculentPersistance : MonoBehaviour
                 updateSunLight();
             }
         }
+        renderSucculent();
     }
 
     public void updateSunLight()
@@ -109,7 +118,7 @@ public class SucculentPersistance : MonoBehaviour
             succulentLive1.fillAmount = pietrario.s1wl / maxLive1;
             suc1.text = pietrario.s1wl.ToString();
             pietrario.dtS1 = DateTime.Now.Ticks;
-
+            conActivator1 += 1;
         }
 
         if (pietrario.s1wl <= 0)
@@ -137,6 +146,7 @@ public class SucculentPersistance : MonoBehaviour
             suc2.text = pietrario.s2wl.ToString();
 
             pietrario.dtS2 = DateTime.Now.Ticks;
+            conActivator2 += 1;
         }
         if (pietrario.s2wl <= 0)
         {
@@ -157,6 +167,7 @@ public class SucculentPersistance : MonoBehaviour
             succulentLive3.fillAmount = pietrario.s3wl / maxLive3;
             suc3.text = pietrario.s3wl.ToString();
             pietrario.dtS3 = DateTime.Now.Ticks;
+            conActivator3 += 1;
         }
         if (pietrario.s3wl <= 0)
         {
@@ -170,6 +181,7 @@ public class SucculentPersistance : MonoBehaviour
 
     public void renderSucculent()
     {
+        
        
         buttonSucculent1.SetActive(true);
         buttonSucculentCopy1.SetActive(true);
@@ -191,40 +203,54 @@ public class SucculentPersistance : MonoBehaviour
         mask3.enabled = false;
         suc3.enabled = false;
         succulentLive3.enabled = false;
+        
         can1.SetActive(false);
         can2.SetActive(false);
         can3.SetActive(false);
         noCan1.SetActive(true);
         noCan2.SetActive(true);
         noCan3.SetActive(true);
-
-
+        
+        activator1.SetActive(false);
+        activator2.SetActive(false);
+        activator3.SetActive(false);
+        
+        buttonGuardian.SetActive(true);
+        
         if (pietrario.s1 != null)
         {
             if (pietrario.s1.persistentId=="SUC1" && succ1==null)
             {
-                succ1 = Instantiate(succulent1, new Vector3(246, 657.585912f, 519.8f), succulent1.transform.rotation);
+                succ1 = Instantiate(succulent1, new Vector3(162.8f, 647.2f, 447.8f), succulent1.transform.rotation);
                 succ1.transform.parent = princiPietrario.transform;
                 succ1.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
             }
             if (pietrario.s1.persistentId == "SUC2" && succ1 == null)
             {
-                succ1 = Instantiate(succulent2, new Vector3(246, 657.585912f, 519.8f), succulent2.transform.rotation);
+                succ1 = Instantiate(succulent2, new Vector3(162, 657.59f, 457.4f), succulent2.transform.rotation);
                 succ1.transform.parent = princiPietrario.transform;
                 succ1.transform.localScale = new Vector3(4f, 4f, 4f);
             }
             if (pietrario.s1.persistentId == "SUC3" && succ1 == null)
             {
-                succ1 = Instantiate(succulent3, new Vector3(246, 700f, 519.8f), succulent3.transform.rotation);
+                succ1 = Instantiate(succulent3, new Vector3(150.8f, 700f, 370.2f), succulent3.transform.rotation);
+                
                 succ1.transform.parent = princiPietrario.transform;
                 succ1.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
             }
             buttonSucculent1.SetActive(false);
             buttonSucculentCopy1.SetActive(false);
-            live1.enabled = true;
-            mask1.enabled = true;
-            suc1.enabled = true;
-            succulentLive1.enabled = true;
+            activator1.SetActive(true);
+            //Debug.Log(conActivator1);
+            if (conActivator1<4)
+            {
+                live1.enabled = true;
+                mask1.enabled = true;
+                suc1.enabled = true;
+                succulentLive1.enabled = true;
+            }
+            
+            
             can1.SetActive(true);
             noCan1.SetActive(false);
         }
@@ -255,10 +281,16 @@ public class SucculentPersistance : MonoBehaviour
             }
             buttonSucculent2.SetActive(false);
             buttonSucculentCopy2.SetActive(false);
-            live2.enabled = true;
-            mask2.enabled = true;
-            suc2.enabled = true;
-            succulentLive2.enabled = true;
+            activator2.SetActive(true);
+            if (conActivator2<4)
+            {
+                live2.enabled = true;
+                mask2.enabled = true;
+                suc2.enabled = true;
+                succulentLive2.enabled = true;            
+            }
+            
+            
             can2.SetActive(true);
             noCan2.SetActive(false);
         }
@@ -290,16 +322,43 @@ public class SucculentPersistance : MonoBehaviour
             }
             buttonSucculent3.SetActive(false);
             buttonSucculentCopy3.SetActive(false);
-            live3.enabled = true;
-            mask3.enabled = true;
-            suc3.enabled = true;
-            succulentLive3.enabled = true;
+            activator3.SetActive(true);
+            if (conActivator3<4)
+            {
+                live3.enabled = true;
+                mask3.enabled = true;
+                suc3.enabled = true;
+                succulentLive3.enabled = true;
+            }
+            
+            
             can3.SetActive(true);
             noCan3.SetActive(false);
         }
         else
         {
             Destroy(succ3);
+        }
+
+        if (pietrario.guardian!=null)
+        {
+            buttonGuardian.SetActive(false);
+            if (pietrario.guardian.id=="GUA1" && guardian==null)
+            {
+                guardian = Instantiate(guardian1);
+                guardian.transform.parent = princiPietrario.transform;
+            }
+            if (pietrario.guardian.id=="GUA2" && guardian==null)
+            {
+                guardian = Instantiate(guardian2);
+                guardian.transform.parent = princiPietrario.transform;
+            }
+            if (pietrario.guardian.id=="GUA3" && guardian==null)
+            {
+                guardian = Instantiate(guardian3);
+                guardian.transform.parent = princiPietrario.transform;
+            }
+            
         }
     }
 
@@ -309,7 +368,7 @@ public class SucculentPersistance : MonoBehaviour
         {
             pietrario.s1 = SucculentRepository.find("SUC1");
             pietrario.s1wl = 100;
-            succ1 = Instantiate(succulent1, new Vector3(246, 657.585912f, 519.8f), succulent1.transform.rotation);
+            succ1 = Instantiate(succulent1, new Vector3(162.8f, 647.2f, 447.8f), succulent1.transform.rotation);
             succ1.transform.parent = princiPietrario.transform;
             succ1.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
 
@@ -319,7 +378,7 @@ public class SucculentPersistance : MonoBehaviour
         {
             pietrario.s1 = SucculentRepository.find("SUC2");
             pietrario.s1wl = 100;
-            succ1 = Instantiate(succulent2, new Vector3(246, 657.585912f, 519.8f), succulent2.transform.rotation);
+            succ1 = Instantiate(succulent2, new Vector3(162, 657.59f, 457.4f), succulent2.transform.rotation);
             succ1.transform.parent = princiPietrario.transform;
             succ1.transform.localScale = new Vector3(4f, 4f, 4f);
         }
@@ -327,7 +386,7 @@ public class SucculentPersistance : MonoBehaviour
         {
             pietrario.s1 = SucculentRepository.find("SUC3");
             pietrario.s1wl = 100;
-            succ1 = Instantiate(succulent3, new Vector3(246, 700f, 519.8f), succulent3.transform.rotation);
+            succ1 = Instantiate(succulent3, new Vector3(150.8f, 700f, 370.2f), succulent3.transform.rotation);
             succ1.transform.parent = princiPietrario.transform;
             succ1.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
         }
@@ -404,6 +463,30 @@ public class SucculentPersistance : MonoBehaviour
         pietrario.Save();
         this.renderSucculent();
     }
+
+    public void enableGuardian(int i)
+    {
+        if (i==0)
+        {
+            pietrario.guardian = GuardianRepository.find("GUA1");
+            guardian = Instantiate(guardian1);
+            guardian.transform.parent = princiPietrario.transform;
+        }
+        if (i==1)
+        {
+            pietrario.guardian = GuardianRepository.find("GUA2");
+            guardian = Instantiate(guardian2);
+            guardian.transform.parent = princiPietrario.transform;
+        }
+        if (i==2)
+        {
+            pietrario.guardian = GuardianRepository.find("GUA3");
+            guardian = Instantiate(guardian3);
+            guardian.transform.parent = princiPietrario.transform;
+        }
+        pietrario.Save();
+        renderSucculent();
+    }
     public void updateWaterLevel(String suctype)
     {
       
@@ -426,4 +509,20 @@ public class SucculentPersistance : MonoBehaviour
         }
     }
 
+    public void Activator(int i)
+    {
+        if (i==0)
+        {
+            conActivator1 = 0;
+        }
+        if (i==1)
+        {
+            conActivator2 = 0;
+        }
+        if (i==2)
+        {
+            conActivator3 = 0;
+        }
+        
+    }
 }
