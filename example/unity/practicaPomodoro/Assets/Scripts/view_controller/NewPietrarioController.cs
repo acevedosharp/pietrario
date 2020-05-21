@@ -23,5 +23,9 @@ public class NewPietrarioController : MonoBehaviour
             null, null, 0,0,0, DateTime.Now.Ticks, DateTime.Now.Ticks,DateTime.Now.Ticks,DateTime.Now.Ticks,100,0.2f,null); // Ignored.
         PietrarioRepository.AddPietrario(pietrario);
         success_panel.SetActive(true);
+
+        PlayerPrefs.SetString("luzTutorialHasBeenCalled", "false");
+        PlayerPrefs.SetString("ARTutorialHasBeenCalled", "false");
+        PlayerPrefs.SetString("pomodoroTutorialHasBeenCalled", "false");
     }
 }

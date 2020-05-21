@@ -19,7 +19,7 @@ public class AddSuculentPanelVisibility : MonoBehaviour
         Panel2();
         Panel3();
         Panel4();
-        
+        Panel4();        
     }
 
     public void Panel1()
@@ -59,6 +59,8 @@ public class AddSuculentPanelVisibility : MonoBehaviour
         {
             Panel4();
         }
+        Debug.Log("Toggled from P1");
+
     }
 
     public void Panel3()
@@ -79,6 +81,7 @@ public class AddSuculentPanelVisibility : MonoBehaviour
         {
             Panel4();
         }
+        Debug.Log("Toggled from P3");
     }
     public void Panel4()
     {
@@ -98,6 +101,7 @@ public class AddSuculentPanelVisibility : MonoBehaviour
         {
             Panel3();
         }
+        Debug.Log("Toggled guardianes from P4");
     }
     
 

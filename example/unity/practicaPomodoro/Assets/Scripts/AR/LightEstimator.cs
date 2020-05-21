@@ -11,6 +11,8 @@ public class LightEstimator : MonoBehaviour
 
     [SerializeField] private Image sunIconIndicator;
 
+    private Color grayColor = new Color(40, 40, 40);
+
     private int frameCounter = 1;
     Pietrario pietrario;
 
@@ -64,7 +66,7 @@ public class LightEstimator : MonoBehaviour
             }
             else
             {
-                sunIconIndicator.color = Color.grey;
+                sunIconIndicator.color = grayColor;
             }
             
         }

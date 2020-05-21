@@ -84,6 +84,9 @@
      <Compile Include="Assets\Scripts\persistence\entities\Succulent.cs" />
      <Compile Include="Assets\Scripts\persistence\entities\SucculentPersistance.cs" />
      <Compile Include="Assets\Scripts\persistence\entities\SucculentRepository.cs" />
+     <Compile Include="Assets\Scripts\tutorial\ARTutorialManager.cs" />
+     <Compile Include="Assets\Scripts\tutorial\LuzTutorialManager.cs" />
+     <Compile Include="Assets\Scripts\tutorial\TutorialManager.cs" />
      <Compile Include="Assets\Scripts\view_controller\InventoryController.cs" />
      <Compile Include="Assets\Scripts\view_controller\MainMenuController.cs" />
      <Compile Include="Assets\Scripts\view_controller\NewPietrarioController.cs" />
@@ -93,76 +96,76 @@
      <None Include="Assets\Prefabs\PietrarioModelo\Blender\MY_REALISTIC_GRASS_ASSISSTANCE\MY REALISTIC GRASS ASSISSTANCE\HOW TO USE_PLEASE READ.txt" />
      <None Include="Assets\Prefabs\Modelado\Rocas\BLENDSWAP_LICENSE.txt" />
  <Reference Include="Unity.XR.Management">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.ARKit">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.ARKit.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.ARKit.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Subsystem.Registration">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.ARSubsystems">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.ARSubsystems.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.ARSubsystems.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.ARSubsystems.Editor">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.ARSubsystems.Editor.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.ARSubsystems.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.ARCore">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.ARCore.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.ARCore.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.ARFoundation.Editor">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.ARFoundation.Editor.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.ARFoundation.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.ARFoundation">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.ARFoundation.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.ARFoundation.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.ARCore.Editor">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.ARCore.Editor.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.ARCore.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.XR.LegacyInputHelpers">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.Management.Editor">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.SpatialTracking">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.XR.LegacyInputHelpers">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.ARKit.Editor">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.ARKit.Editor.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/Unity.XR.ARKit.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/JVH/Desktop/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/lyonix/UnityProjects/pietrario_anim/pietrario/example/unity/practicaPomodoro/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
