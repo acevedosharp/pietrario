@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ARTutorialManager
     - AddSuculentPanelVisibility
     - BackButton
     - ChangeScenes
@@ -9,6 +10,7 @@ ScriptsOnlyBuild:
     - InventorySlides
     - LevelLoader
     - LightEstimator
+    - LuzTutorialManager
     - MainMenuController
     - MoveOnTouch
     - NewPietrarioController
@@ -18,6 +20,7 @@ ScriptsOnlyBuild:
     - SpawnPietrario
     - SucculentPersistance
     - TimeMaster
+    - TutorialManager
     - UpdateSucButton
     - UpdateSucButton2
     - UpdateSucButton3
@@ -86,21 +89,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11174}
+      Script: {instanceID: 11170}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11368}
     - Class: 114
-      Script: {instanceID: 11418}
+      Script: {instanceID: 11414}
     - Class: 114
-      Script: {instanceID: 11458}
+      Script: {instanceID: 11454}
     - Class: 114
-      Script: {instanceID: 11616}
+      Script: {instanceID: 11612}
     - Class: 114
-      Script: {instanceID: 11814}
+      Script: {instanceID: 11812}
     - Class: 114
-      Script: {instanceID: 11904}
+      Script: {instanceID: 11902}
     - Class: 114
-      Script: {instanceID: 12006}
+      Script: {instanceID: 12004}
+    - Class: 114
+      Script: {instanceID: 12124}
     - Class: 114
       Script: {instanceID: 12408}
     - Class: 114
@@ -116,19 +121,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12884}
     - Class: 114
-      Script: {instanceID: 13016}
+      Script: {instanceID: 13010}
     - Class: 114
-      Script: {instanceID: 13044}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 13222}
+      Script: {instanceID: 13046}
     - Class: 114
-      Script: {instanceID: 13366}
+      Script: {instanceID: 13224}
     - Class: 114
-      Script: {instanceID: 13476}
+      Script: {instanceID: 13368}
     - Class: 114
-      Script: {instanceID: 13482}
+      Script: {instanceID: 13478}
     - Class: 114
       Script: {instanceID: 13484}
+    - Class: 114
+      Script: {instanceID: 13486}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -173,15 +180,15 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11174}
+      Script: {instanceID: 11170}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11368}
     - Class: 114
-      Script: {instanceID: 11418}
+      Script: {instanceID: 11414}
     - Class: 114
-      Script: {instanceID: 11862}
+      Script: {instanceID: 11860}
     - Class: 114
-      Script: {instanceID: 11904}
+      Script: {instanceID: 11902}
     - Class: 114
       Script: {instanceID: 12408}
     - Class: 114
@@ -191,11 +198,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13006}
     - Class: 114
-      Script: {instanceID: 13016}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 13476}
+      Script: {instanceID: 13478}
     - Class: 114
-      Script: {instanceID: 13482}
+      Script: {instanceID: 13484}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -240,13 +247,13 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11174}
+      Script: {instanceID: 11170}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11368}
     - Class: 114
-      Script: {instanceID: 11418}
+      Script: {instanceID: 11414}
     - Class: 114
-      Script: {instanceID: 11904}
+      Script: {instanceID: 11902}
     - Class: 114
       Script: {instanceID: 12408}
     - Class: 114
@@ -254,11 +261,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12852}
     - Class: 114
-      Script: {instanceID: 13016}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 13476}
+      Script: {instanceID: 13478}
     - Class: 114
-      Script: {instanceID: 13482}
+      Script: {instanceID: 13484}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -309,25 +316,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11174}
+      Script: {instanceID: 11170}
     - Class: 114
-      Script: {instanceID: 11184}
+      Script: {instanceID: 11180}
     - Class: 114
-      Script: {instanceID: 11248}
+      Script: {instanceID: 11244}
     - Class: 114
-      Script: {instanceID: 11310}
+      Script: {instanceID: 11306}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11368}
     - Class: 114
-      Script: {instanceID: 11418}
+      Script: {instanceID: 11414}
     - Class: 114
-      Script: {instanceID: 11490}
+      Script: {instanceID: 11486}
     - Class: 114
-      Script: {instanceID: 11550}
+      Script: {instanceID: 11546}
     - Class: 114
-      Script: {instanceID: 11904}
+      Script: {instanceID: 11788}
     - Class: 114
-      Script: {instanceID: 12062}
+      Script: {instanceID: 11902}
+    - Class: 114
+      Script: {instanceID: 12060}
     - Class: 114
       Script: {instanceID: 12274}
     - Class: 114
@@ -339,21 +348,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13006}
     - Class: 114
-      Script: {instanceID: 13016}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 13358}
+      Script: {instanceID: 13360}
     - Class: 114
-      Script: {instanceID: 13476}
+      Script: {instanceID: 13478}
     - Class: 114
-      Script: {instanceID: 13482}
+      Script: {instanceID: 13484}
     - Class: 114
-      Script: {instanceID: 13508}
-    - Class: 114
-      Script: {instanceID: 22386}
-    - Class: 114
-      Script: {instanceID: 22388}
-    - Class: 114
-      Script: {instanceID: 22390}
+      Script: {instanceID: 13510}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -398,15 +401,15 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11174}
+      Script: {instanceID: 11170}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11368}
     - Class: 114
-      Script: {instanceID: 11418}
+      Script: {instanceID: 11414}
     - Class: 114
-      Script: {instanceID: 11420}
+      Script: {instanceID: 11416}
     - Class: 114
-      Script: {instanceID: 11904}
+      Script: {instanceID: 11902}
     - Class: 114
       Script: {instanceID: 12408}
     - Class: 114
@@ -414,13 +417,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12852}
     - Class: 114
-      Script: {instanceID: 13016}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 13394}
+      Script: {instanceID: 13396}
     - Class: 114
-      Script: {instanceID: 13476}
+      Script: {instanceID: 13478}
     - Class: 114
-      Script: {instanceID: 13482}
+      Script: {instanceID: 13484}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -448,7 +451,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 1b2695beb2f11ec8bb8296badff394e5
+      Hash: 60fef3d92c633a1f50b08a2318698c3b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AddSuculentPanelVisibility
@@ -658,6 +661,12 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 7aa6ec2aad5bb122f7fdce19fb745add
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TutorialManager
+  - hash:
+      serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -736,7 +745,7 @@ ScriptsOnlyBuild:
     className: AREnvironmentProbeManager
   - hash:
       serializedVersion: 2
-      Hash: d4b5f5b5f7b738a9cac6ba8b734d84e3
+      Hash: e8f39a2e42d926fee4e166dd0c88d9bd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: canvasVisibility
@@ -746,6 +755,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARPlaneMeshVisualizer
+  - hash:
+      serializedVersion: 2
+      Hash: 3076102625c7694acdeeddacf3d869c8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LuzTutorialManager
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -772,7 +787,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: 177856162df15b6fb1b163bbadabf013
+      Hash: ff4078d62f3c524f45fe582b85febbb5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SucculentPersistance
@@ -974,6 +989,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InventoryController
+  - hash:
+      serializedVersion: 2
+      Hash: cc93a096702225bf411aefda700739ee
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ARTutorialManager
   - hash:
       serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
@@ -1185,4 +1206,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/PietrarioListScene.unity
   - Assets/Scenes/PietrarioScene.unity
   - Assets/Scenes/ARScene.unity
-  playerPath: C:/Users/lyonix/UnityProjects/publish_worthy/pietrario/example/unity/practicaPomodoro/pleasework.apk
+  playerPath: C:/Users/Cristian Arenas C/Desktop/pietrario/example/unity/practicaPomodoro/Builds/24-05-20.apk
