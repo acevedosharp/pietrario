@@ -2,11 +2,9 @@
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-
-public class PietrarioRepository
-{
-    public static void AddPietrario(Pietrario pietrario)
-    {
+//Clase que permite tener varios prietrarios
+public class PietrarioRepository {
+    public static void AddPietrario(Pietrario pietrario) {
         Debug.Log("Executed AddPietrario()");
 
         pietrario.id = assignId();
@@ -14,9 +12,8 @@ public class PietrarioRepository
         //Debug.Log("Pietrario "+ pietrario.ToString());
         LoadPietrarios();
     }
-
-    public static int assignId()
-    {
+    //Asigna un id a cada pietario
+    public static int assignId() {
         int globalIdCounter = PlayerPrefs.GetInt("GLOBAL_ID_COUNTER");
         int newId = globalIdCounter + 1;
         PlayerPrefs.SetInt("GLOBAL_ID_COUNTER", newId);
@@ -24,16 +21,16 @@ public class PietrarioRepository
     }
 
 
-    public static ArrayList LoadPietrarios()
-    {
+    //Carga TODOS los pietrarios existentes y los añade a memoria
+
+    public static ArrayList LoadPietrarios() {
         //Debug.Log("Executed LoadPietrarios()");
 
         ArrayList result = new ArrayList();
 
         int idCounter = 1;
 
-        while (PlayerPrefs.GetInt("id_pietrario_" + idCounter) != 0)
-        {
+        while (PlayerPrefs.GetInt("id_pietrario_" + idCounter) != 0) {
             Succulent s1Obj = null;
             Succulent s2Obj = null;
             Succulent s3Obj = null;
@@ -50,9 +47,8 @@ public class PietrarioRepository
             string s3Snapshot = PlayerPrefs.GetString("id_suc_3_piet_" + 1);
             if (!s3Snapshot.Equals("null"))
                 s3Obj = SucculentRepository.find(s3Snapshot);
-            string guardianSnapShot = PlayerPrefs.GetString("idGuardian "+1);
-            if (!guardianSnapShot.Equals("null"))
-            {
+            string guardianSnapShot = PlayerPrefs.GetString("idGuardian " + 1);
+            if (!guardianSnapShot.Equals("null")) {
                 guardian = GuardianRepository.find(guardianSnapShot);
             }
 
@@ -68,11 +64,11 @@ public class PietrarioRepository
                 PlayerPrefs.GetFloat("s1wl_piet_" + 1),
                 PlayerPrefs.GetFloat("s2wl_piet_" + 1),
                 PlayerPrefs.GetFloat("s3wl_piet_" + 1),
-                
-                long.Parse(PlayerPrefs.GetString("dtS1 "+1)),
-                long.Parse(PlayerPrefs.GetString("dtS2 "+1)),
-                long.Parse(PlayerPrefs.GetString("dtS3 "+1)),
-                long.Parse(PlayerPrefs.GetString("dtL"+1)),
+
+                long.Parse(PlayerPrefs.GetString("dtS1 " + 1)),
+                long.Parse(PlayerPrefs.GetString("dtS2 " + 1)),
+                long.Parse(PlayerPrefs.GetString("dtS3 " + 1)),
+                long.Parse(PlayerPrefs.GetString("dtL" + 1)),
                 PlayerPrefs.GetFloat("sunLightLevel " + 1),
                 PlayerPrefs.GetFloat("decaySunLightLevel " + 1),
                 guardian
@@ -85,16 +81,18 @@ public class PietrarioRepository
         return result;
     }
 
-    public static bool existsAnyPietrario()
-    {
+
+    //Valida la existencia de pietrarios.
+    public static bool existsAnyPietrario() {
         // If there the first Pietrario always has an id of 1.
         if (PlayerPrefs.GetInt("id_pietrario_" + 1) != 0)
             return true;
-        
+
         return false;
     }
-    
-    public static void Reset(){
+
+    //Resetea la aplicación, dejandola de fábrica
+    public static void Reset() {
         PlayerPrefs.DeleteAll();
     }
 }

@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class canvasVisibility : MonoBehaviour
-{
+public class canvasVisibility: MonoBehaviour {
     public GameObject menu;
     public GameObject inventory;
     public GameObject rewardPanel;
@@ -16,73 +15,67 @@ public class canvasVisibility : MonoBehaviour
     private TutorialManager _tutorialManager;
     private int currentTutorialPhase = 1;
 
-    void Start()
-    {
+    void Start() {
         func();
         inventoryfunc();
         RewardPanel();
 
-        // Here we extract the TutorialManager component from our canvasTutorial.
-        _tutorialManager = canvasTutorial.GetComponent<TutorialManager>();
-        
+        // Aqui extraemos el tutoriaManager del canvas.
+        _tutorialManager = canvasTutorial.GetComponent < TutorialManager > ();
+
         showPomodoroTutorialF1();
     }
 
-    public void func()
-    {
+
+    //Establece cómo activas las cosas que esten en estado show
+    public void func() {
         isShowing = !isShowing;
-            menu.SetActive(isShowing);
+        menu.SetActive(isShowing);
     }
 
-    public void inventoryfunc()
-    {
+    public void inventoryfunc() {
         inventoryIsShowing = !inventoryIsShowing;
         inventory.SetActive(inventoryIsShowing);
     }
-
-    public void RewardPanel()
-    {
+    //Oculta el panel de recompensa una vez llamado
+    public void RewardPanel() {
         rewardPanel.SetActive(false);
     }
-
-    public void showPomodoroTutorialF1()
-    {
+    //Muestra el tutorial
+    public void showPomodoroTutorialF1() {
         _tutorialManager.showPomodoroF1();
     }
-    public void closePomodoroTutorialF1()
-    {
-        if (currentTutorialPhase == 1)
-        {
+    //Oculta el tutorial
+    public void closePomodoroTutorialF1() {
+        if (currentTutorialPhase == 1) {
             _tutorialManager.hidePomodoroF1();
             showPomodoroTutorialF2();
-            
+
             currentTutorialPhase++;
         }
     }
-    
-    public void showPomodoroTutorialF2()
-    {
+
+    //Muestra el segundo tutorial
+    public void showPomodoroTutorialF2() {
         _tutorialManager.showPomodoroF2();
     }
-    public void closePomodoroTutorialF2()
-    {
-        if (currentTutorialPhase == 2)
-        {
+    //Oculta el segundo tutorial
+    public void closePomodoroTutorialF2() {
+        if (currentTutorialPhase == 2) {
             _tutorialManager.hidePomodoroF2();
             showPomodoroTutorialF3();
 
             currentTutorialPhase++;
         }
     }
-    
-    public void showPomodoroTutorialF3()
-    {
+    //Muestra el tercer tutorial
+
+    public void showPomodoroTutorialF3() {
         _tutorialManager.showPomodoroF3();
     }
-    public void closePomodoroTutorialF3()
-    {
-        if (currentTutorialPhase == 3)
-        {
+    //oculta el tercer tutorial
+    public void closePomodoroTutorialF3() {
+        if (currentTutorialPhase == 3) {
             _tutorialManager.hidePomodoroF3();
             currentTutorialPhase = 0;
         }
