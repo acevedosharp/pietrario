@@ -208,20 +208,20 @@ public class SucculentPersistance: MonoBehaviour {
 
         if (pietrario.s1 != null) {
             if (pietrario.s1.persistentId == "SUC1" && succ1 == null) {
-                succ1 = Instantiate(succulent1, new Vector3(162.8 f, 647.2 f, 447.8 f), succulent1.transform.rotation);
+                succ1 = Instantiate(succulent1, new Vector3(162.8f, 647.2f, 447.8f), succulent1.transform.rotation);
                 succ1.transform.parent = princiPietrario.transform;
-                succ1.transform.localScale = new Vector3(0.4 f, 0.4 f, 0.4 f);
+                succ1.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
             }
             if (pietrario.s1.persistentId == "SUC2" && succ1 == null) {
-                succ1 = Instantiate(succulent2, new Vector3(162, 657.59 f, 457.4 f), succulent2.transform.rotation);
+                succ1 = Instantiate(succulent2, new Vector3(162, 657.59f, 457.4f), succulent2.transform.rotation);
                 succ1.transform.parent = princiPietrario.transform;
-                succ1.transform.localScale = new Vector3(4 f, 4 f, 4 f);
+                succ1.transform.localScale = new Vector3(4f, 4f, 4f);
             }
             if (pietrario.s1.persistentId == "SUC3" && succ1 == null) {
-                succ1 = Instantiate(succulent3, new Vector3(150.8 f, 700 f, 370.2 f), succulent3.transform.rotation);
+                succ1 = Instantiate(succulent3, new Vector3(150.8f, 700f, 370.2f), succulent3.transform.rotation);
 
                 succ1.transform.parent = princiPietrario.transform;
-                succ1.transform.localScale = new Vector3(0.4 f, 0.4 f, 0.4 f);
+                succ1.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
             }
             buttonSucculent1.SetActive(false);
             buttonSucculentCopy1.SetActive(false);
@@ -243,19 +243,19 @@ public class SucculentPersistance: MonoBehaviour {
         if (pietrario.s2 != null) {
             if (pietrario.s2.persistentId == "SUC1" && succ2 == null) {
 
-                succ2 = Instantiate(succulent1, new Vector3(312.120392 f, 657.585912 f, 359.38752 f), succulent1.transform.rotation);
+                succ2 = Instantiate(succulent1, new Vector3(312.120392f, 657.585912f, 359.38752f), succulent1.transform.rotation);
                 succ2.transform.parent = princiPietrario.transform;
-                succ2.transform.localScale = new Vector3(0.4 f, 0.4 f, 0.4 f);
+                succ2.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
             }
             if (pietrario.s2.persistentId == "SUC2" && succ2 == null) {
-                succ2 = Instantiate(succulent2, new Vector3(312.120392 f, 657.585912 f, 314.2 f), succulent2.transform.rotation);
+                succ2 = Instantiate(succulent2, new Vector3(312.120392f, 657.585912f, 314.2f), succulent2.transform.rotation);
                 succ2.transform.parent = princiPietrario.transform;
-                succ2.transform.localScale = new Vector3(4 f, 4 f, 4 f);
+                succ2.transform.localScale = new Vector3(4f, 4f, 4f);
             }
             if (pietrario.s2.persistentId == "SUC3" && succ2 == null) {
-                succ2 = Instantiate(succulent3, new Vector3(312.120392 f, 657.585912 f, 314.2 f), succulent3.transform.rotation);
+                succ2 = Instantiate(succulent3, new Vector3(312.120392f, 657.585912f, 314.2f), succulent3.transform.rotation);
                 succ2.transform.parent = princiPietrario.transform;
-                succ2.transform.localScale = new Vector3(0.4 f, 0.4 f, 0.4 f);
+                succ2.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
             }
             buttonSucculent2.SetActive(false);
             buttonSucculentCopy2.SetActive(false);
@@ -276,20 +276,20 @@ public class SucculentPersistance: MonoBehaviour {
 
         if (pietrario.s3 != null) {
             if (pietrario.s3.persistentId == "SUC1" && succ3 == null) {
-                succ3 = Instantiate(succulent1, new Vector3(493.2 f, 679.2 f, 387.8 f), succulent1.transform.rotation);
+                succ3 = Instantiate(succulent1, new Vector3(493.2f, 679.2f, 387.8f), succulent1.transform.rotation);
                 succ3.transform.parent = princiPietrario.transform;
-                succ3.transform.localScale = new Vector3(0.4 f, 0.4 f, 0.4 f);
+                succ3.transform.localScale = new Vector3(0.4f, 0.4f, 04f);
             }
             if (pietrario.s3.persistentId == "SUC2" && succ3 == null) {
 
-                succ3 = Instantiate(succulent2, new Vector3(479.4184 f, 672.594472 f, 347.8 f), succulent2.transform.rotation);
+                succ3 = Instantiate(succulent2, new Vector3(479.4184f, 672.594472f, 347.8f), succulent2.transform.rotation);
                 succ3.transform.parent = princiPietrario.transform;
-                succ3.transform.localScale = new Vector3(4 f, 4 f, 4 f);
+                succ3.transform.localScale = new Vector3(4f, 4f, 4f);
             }
             if (pietrario.s3.persistentId == "SUC3" && succ3 == null) {
-                succ3 = Instantiate(succulent3, new Vector3(503.6 f, 672.594488 f, 370.2 f), succulent3.transform.rotation);
+                succ3 = Instantiate(succulent3, new Vector3(503.6f, 672.594488f, 370.2f), succulent3.transform.rotation);
                 succ3.transform.parent = princiPietrario.transform;
-                succ3.transform.localScale = new Vector3(0.4 f, 0.4 f, 0.4 f);
+                succ3.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
             }
             buttonSucculent3.SetActive(false);
             buttonSucculentCopy3.SetActive(false);
@@ -330,25 +330,25 @@ public class SucculentPersistance: MonoBehaviour {
         if (i == 0) {
             pietrario.s1 = SucculentRepository.find("SUC1");
             pietrario.s1wl = 100;
-            succ1 = Instantiate(succulent1, new Vector3(162.8 f, 647.2 f, 447.8 f), succulent1.transform.rotation);
+            succ1 = Instantiate(succulent1, new Vector3(162.8f, 647.2f, 447.8f), succulent1.transform.rotation);
             succ1.transform.parent = princiPietrario.transform;
-            succ1.transform.localScale = new Vector3(0.4 f, 0.4 f, 0.4 f);
+            succ1.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
 
         }
 
         if (i == 1) {
             pietrario.s1 = SucculentRepository.find("SUC2");
             pietrario.s1wl = 100;
-            succ1 = Instantiate(succulent2, new Vector3(162, 657.59 f, 457.4 f), succulent2.transform.rotation);
+            succ1 = Instantiate(succulent2, new Vector3(162, 657.59f, 457.4f), succulent2.transform.rotation);
             succ1.transform.parent = princiPietrario.transform;
-            succ1.transform.localScale = new Vector3(4 f, 4 f, 4 f);
+            succ1.transform.localScale = new Vector3(4f, 4f, 4f);
         }
         if (i == 2) {
             pietrario.s1 = SucculentRepository.find("SUC3");
             pietrario.s1wl = 100;
-            succ1 = Instantiate(succulent3, new Vector3(150.8 f, 700 f, 370.2 f), succulent3.transform.rotation);
+            succ1 = Instantiate(succulent3, new Vector3(150.8f, 700f, 370.2f), succulent3.transform.rotation);
             succ1.transform.parent = princiPietrario.transform;
-            succ1.transform.localScale = new Vector3(0.4 f, 0.4 f, 0.4 f);
+            succ1.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
         }
         pietrario.dtS1 = DateTime.Now.Ticks;
         pietrario.Save();
@@ -361,9 +361,9 @@ public class SucculentPersistance: MonoBehaviour {
         if (i == 0) {
             pietrario.s2 = SucculentRepository.find("SUC1");
             pietrario.s2wl = 100;
-            succ2 = Instantiate(succulent1, new Vector3(312.120392 f, 657.585912 f, 359.38752 f), succulent1.transform.rotation);
+            succ2 = Instantiate(succulent1, new Vector3(312.120392f, 657.585912f, 359.38752f), succulent1.transform.rotation);
             succ2.transform.parent = princiPietrario.transform;
-            succ2.transform.localScale = new Vector3(0.4 f, 0.4 f, 0.4 f);
+            succ2.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
 
 
 
@@ -372,17 +372,17 @@ public class SucculentPersistance: MonoBehaviour {
         if (i == 1) {
             pietrario.s2 = SucculentRepository.find("SUC2");
             pietrario.s2wl = 100;
-            succ2 = Instantiate(succulent2, new Vector3(312.120392 f, 657.585912 f, 314.2 f), succulent2.transform.rotation);
+            succ2 = Instantiate(succulent2, new Vector3(312.120392f, 657.585912f, 314.2f), succulent2.transform.rotation);
             succ2.transform.parent = princiPietrario.transform;
-            succ2.transform.localScale = new Vector3(4 f, 4 f, 4 f);
+            succ2.transform.localScale = new Vector3(4f, 4f, 4f);
 
         }
         if (i == 2) {
             pietrario.s2 = SucculentRepository.find("SUC3");
             pietrario.s2wl = 100;
-            succ2 = Instantiate(succulent3, new Vector3(312.120392 f, 657.585912 f, 314.2 f), succulent3.transform.rotation);
+            succ2 = Instantiate(succulent3, new Vector3(312.120392f, 657.585912f, 314.2f), succulent3.transform.rotation);
             succ2.transform.parent = princiPietrario.transform;
-            succ2.transform.localScale = new Vector3(0.4 f, 0.4 f, 0.4 f);
+            succ2.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
 
         }
         pietrario.dtS2 = DateTime.Now.Ticks;
@@ -394,24 +394,24 @@ public class SucculentPersistance: MonoBehaviour {
         if (i == 0) {
             pietrario.s3 = SucculentRepository.find("SUC1");
             pietrario.s3wl = 100;
-            succ3 = Instantiate(succulent1, new Vector3(493.2 f, 679.2 f, 387.8 f), succulent1.transform.rotation);
+            succ3 = Instantiate(succulent1, new Vector3(493.2f, 679.2f, 387.8f), succulent1.transform.rotation);
             succ3.transform.parent = princiPietrario.transform;
-            succ3.transform.localScale = new Vector3(0.4 f, 0.4 f, 0.4 f);
+            succ3.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
         }
 
         if (i == 1) {
             pietrario.s3 = SucculentRepository.find("SUC2");
             pietrario.s3wl = 100;
-            succ3 = Instantiate(succulent2, new Vector3(479.4184 f, 672.594472 f, 347.8 f), succulent2.transform.rotation);
+            succ3 = Instantiate(succulent2, new Vector3(479.4184f, 672.594472f, 347.8f), succulent2.transform.rotation);
             succ3.transform.parent = princiPietrario.transform;
-            succ3.transform.localScale = new Vector3(4 f, 4 f, 4 f);
+            succ3.transform.localScale = new Vector3(4f, 4f, 4f);
         }
         if (i == 2) {
             pietrario.s3 = SucculentRepository.find("SUC3");
             pietrario.s3wl = 100;
-            succ3 = Instantiate(succulent3, new Vector3(503.6 f, 672.594488 f, 370.2 f), succulent3.transform.rotation);
+            succ3 = Instantiate(succulent3, new Vector3(503.6f, 672.594488f, 370.2f), succulent3.transform.rotation);
             succ3.transform.parent = princiPietrario.transform;
-            succ3.transform.localScale = new Vector3(0.4 f, 0.4 f, 0.4 f);
+            succ3.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
         }
         pietrario.dtS3 = DateTime.Now.Ticks;
         pietrario.Save();
@@ -442,15 +442,15 @@ public class SucculentPersistance: MonoBehaviour {
     public void updateWaterLevel(String suctype) {
 
         if (suctype == "SUC1") {
-            pietrario.s1wl = 100 f;
+            pietrario.s1wl = 100f;
             renderSucculent();
             pietrario.Save();
         } else if (suctype == "SUC2") {
-            pietrario.s2wl = 100 f;
+            pietrario.s2wl = 100f;
             renderSucculent();
             pietrario.Save();
         } else if (suctype == "SUC3") {
-            pietrario.s3wl = 100 f;
+            pietrario.s3wl = 100f;
             renderSucculent();
             pietrario.Save();
         }

@@ -8,7 +8,7 @@ public class MoveOnTouch: MonoBehaviour {
     private float controller;
     Quaternion pr;
     void Start() {
-        controller = 0.3 f;
+        controller = 0.3f;
         pr = transform.rotation;
     }
 
@@ -25,7 +25,7 @@ public class MoveOnTouch: MonoBehaviour {
             }
         } else {
             if (transform.rotation != pr) {
-                transform.rotation = Quaternion.Lerp(transform.rotation, pr, Time.time * 0.01 f);
+                transform.rotation = Quaternion.Lerp(transform.rotation, pr, Time.time * 0.01f);
             }
         }
     }

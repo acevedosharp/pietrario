@@ -14,7 +14,7 @@ public class GradientScript: MonoBehaviour {
         backgroundTexture = new Texture2D(1, 2);
         backgroundTexture.wrapMode = TextureWrapMode.Clamp;
         backgroundTexture.filterMode = FilterMode.Bilinear;
-        SetColor(new Color(0.75 F, 0.75 F, 0.75 F), Color.gray);
+        SetColor(new Color(0.75F, 0.75F, 0.75F), Color.gray);
     }
     //Establece el color por defecto
     public void SetColor(Color color1, Color color2) {

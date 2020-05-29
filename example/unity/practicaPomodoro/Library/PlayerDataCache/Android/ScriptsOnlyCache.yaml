@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - BackButton
     - ChangeScenes
     - GradientScript
+    - InfoManager
     - InventoryController
     - InventorySlides
     - LevelLoader
@@ -357,6 +358,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13484}
     - Class: 114
       Script: {instanceID: 13510}
+    - Class: 114
+      Script: {instanceID: 23380}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1199,6 +1202,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 2157070d461f3a99bd9fcee9e251079d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InfoManager
   platform: 13
   scenePathNames:
   - Assets/Scenes/StartScene.unity
@@ -1206,4 +1215,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/PietrarioListScene.unity
   - Assets/Scenes/PietrarioScene.unity
   - Assets/Scenes/ARScene.unity
-  playerPath: C:/Users/Cristian Arenas C/Desktop/pietrario/example/unity/practicaPomodoro/Builds/24-05-20.apk
+  playerPath: C:/Users/lyonix/UnityProjects/pietrario/example/unity/practicaPomodoro/dsd.apk
